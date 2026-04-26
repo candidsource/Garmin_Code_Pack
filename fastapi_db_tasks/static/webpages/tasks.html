@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DB Task Status Dashboard</title>
+        <!-- Bootstrap CSS -->
+        <link rel="icon" href="/images/favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <script src="/js/prechecks.js"></script>
+        <style>
+            .sidebar {
+                height: 100vh;
+                background-color: #343a40;
+                color: white;
+                position: fixed;
+                left: 0;
+                top: 0;
+                padding: 1rem;
+                transition: width 0.3s;
+                width: 280px;
+                overflow: hidden;
+            }
+
+            .sidebar.collapsed {
+                width: 70px;
+            }
+
+            .sidebar .nav-link {
+                color: white;
+                display: flex;
+                align-items: center;
+                padding: 0.8rem;
+            }
+
+            .sidebar .nav-link span {
+                margin-left: 10px;
+            }
+
+            .sidebar.collapsed .nav-link span {
+                display: none;
+            }
+
+            .sidebar-toggler {
+                cursor: pointer;
+                color: white;
+                position: absolute;
+                top: 10px;
+                right: -25px;
+                background-color: #343a40;
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .content {
+                margin-left: 280px;
+                transition: margin-left 0.3s;
+            }
+
+            .content.collapsed {
+                margin-left: 70px;
+            }
+
+            .status-not-started {
+                background-color: #e0e0e0;
+            }
+
+            /* Grey */
+            .status-running {
+                background-color: #fff3cd;
+            }
+
+            /* Yellow */
+            .status-passed {
+                background-color: #d4edda;
+            }
+
+            /* Green */
+            .status-failed {
+                background-color: #f8d7da;
+            }
+
+            .form-input {
+                height: 28px;
+            }
+
+            .my_ps-11 {
+                padding-left: 11rem;
+            }
+
+            .btn-resume {
+                min-width: 68px;
+            }
+
+            .alert-circle {
+                width: 18px;
+                height: 18px;
+                display: -webkit-inline-box;
+                margin-top: 4px;
+                position: absolute;
+            }
+
+            .lbl-status {
+                margin-left: 25px;
+            }
+
+            @keyframes anim-glow {
+                0% {
+                    box-shadow: 0 0 rgba(#61EF61, 1);
+                }
+
+                100% {
+                    box-shadow: 0 0 10px 8px transparent;
+                    border-width: 2px;
+                }
+            }
+
+            .icon {
+                border-radius: 50%;
+                border: 2px solid #61EF61;
+                width: 10px;
+                height: 10px;
+                text-align: center;
+                position: relative;
+                animation: anim-glow 2s ease 3;
+
+            }
+
+            .border-warning,
+            .border-success {
+                border-width: 3px !important;
+            }
+
+            .custom-button {
+                --bs-btn-bg: #495057;
+                --bs-btn-border-color: #495057;
+                --bs-btn-hover-bg: #495057;
+                --bs-btn-hover-border-color: #495057;
+            }
+
+            .table {
+                /* --bs-table-border-color: #495057; */
+            }
+
+            .highlighted_row {
+                background-color: #adb5bd;
+            }
+
+            #disclaimer {
+                position: absolute;
+                bottom: 1px;
+                margin-left: -10px;
+                font-size: 14px;
+            }
+
+            .env_dd {
+                height: 8px;
+                float: left;
+                top: -19px;
+                margin-left: 40px;
+            }
+
+            textarea {
+                width: 100%;
+                height: 100%;
+            }
+
+            .patch_adop_selector {
+                /* float: right; */
+                margin-top: 6px;
+            }
+
+
+            /* Red */
+        </style>
+    </head>
+
+    <body>
+
+        <div class="d-flex">
+            <!-- Sidebar -->
+            <div id="sidebar" class="sidebar">
+
+                <div class="sidebar-toggler" onclick="toggleSidebar()">&#9776;</div>
+                <div id="user"></div>
+
+                <nav class="nav flex-column mt-5">
+                    <a class="nav-link" href="#" id="nav_user_guest" title="Log In" onclick="show_login_modal();">
+                        <i class="bi bi-person-fill-lock"></i>
+                        <span>Guest!</span>
+                        <i class="bi bi-box-arrow-in-right" style="margin-left: 14rem;position: absolute;"></i>
+                    </a>
+                    <a class="nav-link" href="#" id="nav_user_loggedin" style="display:none;" title="Log Out">
+                        <i class="bi bi-person-fill-check"></i>
+                        <span id="span_logged_in_user_name" onclick="current_user_management(event);"></span>
+                        <i class="bi bi-box-arrow-left" style="margin-left: 13rem;position: absolute;"
+                            onclick="show_user_mgmt_modal(event);" hidden></i>
+                        <i class="bi bi-box-arrow-left" style="margin-left: 14rem;position: absolute;"
+                            onclick="logout(event);"></i>
+                    </a>
+                    <a class="nav-link" href="#" id="full_tasks_buton" data-bs-target="#div_content_full"
+                        aria-expanded="false" onclick="save_test(event);">
+                        <i class="bi bi-list-task"></i>
+                        <span>ebscloneautofull - Full</span>
+                    </a>
+                    <a class="nav-link collapsed" href="#" id="fast_tasks_buton" data-bs-target="#div_content_fast"
+                        aria-expanded="false" onclick="save_test(event);">
+                        <i class="bi bi-list-task"></i>
+                        <span>ebscloneautofast - Fast</span>
+                    </a>
+                    <a class="nav-link collapsed" href="#" id="patch_tasks_buton" data-bs-target="#div_content_patch"
+                        aria-expanded="false" onclick="save_test(event);">
+                        <i class="bi bi-list-task"></i>
+                        <span>ebscloneautofast - Patch</span>
+                    </a>
+                </nav>
+                <div id="alert_placeholder"></div>
+
+                <div id="disclaimer">
+                    <button type="button" id="login_modal_launcher" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#login_modal_static_backdrop" hidden>
+                        Launch login modal
+                    </button><br>
+
+                    <nav class="nav flex-column mt-5">
+                        <a class="nav-link" href="#" id="nav_disclaimer">
+                            <i class="bi bi-exclamation-triangle" title="Disclaimer" style="display:none;"></i>
+                            <span>EBS Automation Dashboard<br>
+                                Developed by Candid Source LLC, USA<br>
+                                Copyright © 2025 Candid Source LLC, USA<br>
+                                All right reserved</span>
+                        </a>
+                    </nav>
+                </div>
+
+            </div>
+
+
+            <!-- Main Content -->
+            <div id="content" class="content container-fluid mw-100">
+
+                <div id="header" style="max-height: 5rem !important;">
+                    <img rel="preload" as="image" id="imgcandid" class="float-start" src="/images/candid.png"
+                        loading="lazy" style="height: 80px; width:108px" alt="Candid Source" class="img-fluid">
+
+                    <img id="imgclient" class="float-end" src="/images/client.png" loading="lazy" alt="Burns McDonnel"
+                        class="img-fluid">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="dbConfigModal" tabindex="-1" aria-labelledby="dbConfigModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="dbConfigModalLabel">DB Configs</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="dbConfigModalBody">
+                        <form id="dbConfigForm">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary" onclick="save_db_config();">Save</button> -->
+                        <!-- <button type="button" class="btn btn-primary" id="btn_save_db_config">Save</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- log modal -->
+        <div class="modal fade" id="logModalFullScreen_db_tasks" tabindex="-1"
+            aria-labelledby="logModalFullScreen_db_tasksLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h1 class="modal-title fs-4" id="logModalFullScreen_db_tasksLabel">Logs</h1> -->
+
+                        <div class="dropdown float-start">
+                            <button id="LMDD_btn_task_types" class="btn btn-primary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Task Type
+                            </button>
+                            <ul class="dropdown-menu" id="LMDD_task_types"></ul>
+
+                            <button id="LMDD_btn_tasks" class="btn btn-primary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Select Task
+                            </button>
+                            <ul class="dropdown-menu" id="LMDD_task"></ul>
+
+                            <button id="LMBTN_task_log_file" class="btn btn-primary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Task Execution
+                            </button>
+                            <ul class="dropdown-menu" id="LMDD_task_log_file_ul"></ul>
+
+                        </div>
+
+                    </div>
+                    <div id="#log_modal_body" class="modal-body">
+                        <textarea id="txtarea_logs" class="form-control w-100 h-100" disabled></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Log in Modal -->
+        <!-- Modal -->
+
+
+        <div class="modal fade" id="login_modal_static_backdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="login_modal_label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="login_modal_label">LogIn</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="login_user" class="form-label">User ID</label>
+                                <input type="email" class="form-control" id="login_user" aria-describedby="login_help">
+                                <div id="login_help" class="form-text"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="login_password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="login_password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="login();">LogIn</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="user_management_static_backdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="user_management_modal_label" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="confirmation_static_backdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="confirmation_modal_label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="confirmation_modal_label">Confirm Task Execution!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><label>Env:</label< /th>
+                                    <td><label id="confirm_modal_label_env"></label></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label>Task:</label></th>
+                                    <td><label id="confirm_modal_label_task"></label></td>
+                                </tr>
+                                <!-- <tr>
+                                <th scope="row"><label>Type:</label></th>
+                                <td><label id="confirm_modal_label_type"></label></td>
+                              </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button id="confirmation_modal_close_button" type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                        <button id="confirmation_modal_start_button" type="button" class="btn btn-primary"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="patch-adop_static_backdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="patch-adop_modal_label" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="patch-adop_confirmation_modal_label">Patch-Adop Confirm Task
+                            Execution!
+                            <label style="margin-left:50px;">ENV:</label>
+                            <label id="patch-adop_confirm_modal_label_env"></label>
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="row"><label>Task Name</label></th>
+                                    <!-- <th>Forced</th>
+                                    <th>Restart</th> -->
+                                    <th>Args</th>
+                                </tr>
+                            </thead>
+                            <tbody id="patch-adop_modal_tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button id="patch-adop_confirmation_modal_close_button" type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                        <button id="patch-adop_confirmation_modal_start_button" type="button"
+                            class="btn btn-primary"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="current_user_management_modal" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="current_user_mgmt_modal_label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="current_user_mgmt_modal_label">Welcome!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="old_pass" class="form-label">Old Password</label>
+                                <input type="password" class="form-control" id="old_pass">
+                            </div>
+                            <div class="mb-3">
+                                <label for="new_pass" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="new_pass">
+                            </div>
+                            <div class="mb-3">
+                                <label for="renew_pass" class="form-label">Re-type Password</label>
+                                <input type="password" class="form-control" id="renew_pass">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="change_pass();">Change</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </body>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const TASKS = {};
+        const EXTRAS = {}
+        function get_task_table_container(task, info) {
+            return `<div id="div_content_${task}" class="container my-5 collapse" style="margin-top:5rem !important;">
+                    <div class="text-center ${task.replace(/.*_/, '')}_style">
+                        <h1 style="white-space:nowrap !important;">${info}</h1>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover" id="${task}-table">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Task</th>
+                                    <th>Current State</th>
+                                    <th>Started</th>
+                                    <th>Finished</th>
+                                    <th>
+                                        <span id="extra_header_env_cell_${task}"></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="${task}-tbody-main">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>`;
+        }
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            sidebar.classList.toggle('collapsed');
+            content.classList.toggle('collapsed');
+        }
+
+        function update_env(task_name, wait_for_table = true) {
+            let elem = document.getElementById(`anchor_env_dd_${task_name}`);
+            if (!elem) {
+                console.error(`Element with id 'anchor_env_dd_${task_name}' not found.`);
+                return;
+            }
+
+            let stored_env = get_stored_env(wait_for_table);
+            if (!stored_env)
+                return
+
+            if (wait_for_table && (!stored_env || stored_env === "waiting")) {
+                return;
+            }
+            elem.textContent = $(`#aopt_dd_env_${task_name}_${stored_env}`).text();
+            elem.setAttribute('value', stored_env);
+        }
+
+        function add_env_drop_down(element, envs, parent) {
+            $(element).html(`
+            <div class="dropdown env_dd">
+                <a id="anchor_env_dd_${parent}"
+                    class="btn btn-info btn-sm dropdown-toggle btn-resume" 
+                    href="#" 
+                    role="button" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                >
+                    ENV
+                </a>
+
+                <ul id="dd_env_${parent}" class="dropdown-menu">
+                </ul>
+            </div>`);
+
+            Object.keys(envs).forEach(env => {
+                $(`#dd_env_${parent}`).append(`<li><a id="aopt_dd_env_${parent}_${env}" class="dropdown-item" href="#" data-val="${env}">${envs[env]}</a></li>`)
+            });
+
+            element[0].querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', function () {
+                    let elem = document.getElementById(`anchor_env_dd_${parent}`);
+                    elem.textContent = this.textContent;
+                    elem.setAttribute('value', this.getAttribute('data-val'));
+                    save_env(elem.id, this.getAttribute('data-val'));
+                    update_status();
+                });
+            });
+
+            let stored_env = get_stored_env(wait_for_table = true);
+            if (stored_env === "waiting") {
+                console.log("Waiting for table to load...");
+            }
+            else if (!stored_env) {
+                document.querySelector(`#dd_env_${parent} .dropdown-item:first`).click();
+            }
+            else {
+                let elem = document.getElementById(`anchor_env_dd_${parent}`);
+                elem.setAttribute('value', stored_env);
+                elem.textContent = $(`#aopt_dd_env_${parent}_${stored_env}`).text();
+            }
+
+            var update_env_timer = setInterval(() => {
+                stored_env = get_stored_env(wait_for_table = true);
+                if (stored_env && stored_env !== "waiting") {
+                    clearInterval(update_env_timer);
+                    update_env(parent, false);
+                }
+            }, 500); // Update every 1/2 second
+
+
+        }
+
+        function get_stored_env(wait_for_table = true) {
+            var drop_down, page_loaded;
+            page_loaded = $('div[id^="div_content"]:visible');
+            if (wait_for_table && page_loaded.length === 0) {
+                return "waiting";
+            }
+            let task_name = page_loaded.attr('id').split('_').slice(-1)[0];
+            return localStorage.getItem(`anchor_env_dd_${task_name}`) || null;
+        }
+
+        function save_env(elem_id, env) {
+            localStorage.setItem(elem_id, env);
+        }
+        function save_test(event) {
+            var test_type = $(event.target).closest('a').attr('data-bs-target');
+            localStorage.setItem("test_type", test_type);
+        }
+
+        function form_url(url, caller) {
+            let task_type = $('div[id^="div_content_"]:visible').attr('id');
+            if (!task_type) {
+                return;
+            }
+            task_type = task_type.replace('div_content_', '');
+            let env = get_stored_env();
+            if (!env) {
+                alert("Kindly choose an environment!", "Choose Env!");
+                return null;
+            }
+            else if (env === "waiting") {
+                return null;
+            }
+            if (/\&/.test(url)) {
+                url = `${url}&env=${env}`;
+            }
+            else {
+                url = `${url}?env=${env}`;
+            }
+            return url;
+        }
+
+        function logout(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $.post('/logout', { username: "someuser" })
+                .done(function (data) {
+                    if (data["status"] == "success") {
+                        appendAlert("Logout successful", "success");
+                        $('a[id^="nav_user"]').toggle();
+                    } else {
+                        appendAlert(data["message"], "danger");
+                    }
+                })
+                .fail(function (error) {
+                    console.error('Logout Error', error);
+                    appendAlert(error, "danger");
+                });
+        }
+        function populate_task(event, task_type, task_segment, task_name) {
+            event.preventDefault();
+            event.stopPropagation();
+            let task_identifier = `${task_type}-${task_segment}`;
+            document.getElementById(`LMDD_btn_task_types`).textContent = task_identifier;
+
+            $(`#LMDD_task > li`).hide();
+            $(`#LMDD_task`).find(`li[task_type="${task_type}"]`).show();
+            document.getElementById(`LMDD_btn_tasks`).textContent = $(`#LMDD_task`).find(`li[task_type="${task_type}"][task_segment="${task_segment}"][task_name="${task_name}"] a`).text();
+            if (event.target.id !== "") {
+                $(`#LMDD_btn_task_types, #LMDD_btn_tasks`).dropdown('toggle');
+            }
+        }
+        function escapeHTML(html_string) {
+	    return html_string.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	}
+        var show_table_timer;
+        $(document).ready(function () {
+            get_user();
+            show_tasks_and_status();
+            show_table_timer = setInterval(function () {
+                fn_show_first_table();
+            }, 100);
+        });
+
+        var _config = {};
+        function show_tasks_and_status() {
+            let new_header;
+            const extra_header_name = 'extra_header_env_cell_';
+            $.get('/tasks/list')
+                .done(function (config) {
+                    _config = config || {};
+                    let all_tasks = config["tasks"];
+                    Object.keys(all_tasks).forEach(function (task_type) {
+                        let tasks = all_tasks[task_type];
+                        update_prechecks(task_type);
+                        Object.keys(tasks).forEach(function (task) {
+                            let sub_task_dict = tasks[task]
+                            new_header = `<tr id="extra_header_${task_type}-${task}" class="highlighted_row">
+                                <td colspan="5"><label>${sub_task_dict["info"]["TASK_TYPE"] || ""}<label></td>
+                                </tr>`;
+                            populateTasksTable(tasks, task_type, task, new_header, parent = task_type);
+                        });
+
+                        var env_parent = $(`span[id="${extra_header_name}${task_type}"]`);
+                        add_env_drop_down(env_parent, config["envs"], task_type);
+                    });
+
+                    // ["clone", "fast-clone"].forEach(function (task) {
+                    //     new_header = `<tr id="extra_header_${task}" class="highlighted_row">
+                    //         <td colspan="5"><label>${tasks[task]["info"]["TASK_TYPE"] || ""}<label></td>
+                    //         </tr>`;
+                    //     populateTasksTable(tasks, task, new_header);
+                    //     // $("#LMDD_task_types").append(`<li><a class="dropdown-item" href="#" onclick="populate_task(event, '${task}');">${task.toUpperCase()}</a></li>`);
+
+                    //     var env_parent = $(`span[id="${extra_header_name}${task}"]`);
+                    //     add_env_drop_down(env_parent, data["envs"], task);
+
+
+                    //     let fast = task === "fast-clone" ? "fast-" : "";
+                    //     let apps_task = `${fast}apps`;
+                    //     new_header = `<tr id="extra_header_${apps_task}" class="highlighted_row">
+                    //         <td colspan="5"><label>${tasks[apps_task]["info"]["TASK_TYPE"] || ""}<label></td>
+                    //         </tr>`;
+                    //     populateTasksTable(tasks, apps_task, new_header, parent = task);
+
+                    //     let final_tasks = "final-tasks";
+                    //     new_header = `<tr id="extra_header_${final_tasks}" class="highlighted_row">
+                    //         <td colspan="5"><label>${tasks[final_tasks]["info"]["TASK_TYPE"] || ""}<label></td>
+                    //         </tr>`;
+                    //     populateTasksTable(tasks, final_tasks, new_header, parent = task);
+                    // });
+
+                    // populateTasksTable(tasks, "patch-adop");
+                    // // $("#LMDD_task_types").append(`<li><a class="dropdown-item" href="#" onclick="populate_task(event, 'patch-adop');">PATCH ADOP</a></li>`);
+
+                    // var env_parent = $(`span[id="${extra_header_name}patch-adop"]`);
+                    // add_env_drop_down(env_parent, data["envs"], "patch-adop");
+
+                    fn_show_first_table();
+                })
+                .fail(function (error) {
+                    console.error('Error fetching tasks:', error);
+                });
+
+            $.get('/configs/dbconfig')
+                .done(function (data) {
+                    make_modal(data);
+                })
+                .fail(function (error) {
+                    console.error('Error fetching db config:', error);
+                });
+
+            $('a[id$="tasks_buton"]').on('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                el = event.target;
+                while (el && el.parentNode) {
+                    if (el.tagName && el.tagName.toLowerCase() == 'a') {
+                        break
+                    }
+                    el = el.parentNode;
+                }
+                $('div[id^="div_content"]').hide();
+                $(el.getAttribute('data-bs-target')).show();
+                console.log('clicked');
+            });
+        }
+
+        function fn_show_first_table() {
+            var last_test_type = localStorage.getItem("test_type");
+            if (last_test_type && $(`a[data-bs-target="${last_test_type}"]`).length) {
+                $(`a[data-bs-target$="${last_test_type}"]`).click();
+
+            }
+            else if ($($('a[id$="tasks_buton"]').attr('data-bs-target'))) {
+                $($('a[id$="tasks_buton"]:first').attr('data-bs-target')).show();
+            }
+            update_status();
+            clearInterval(show_table_timer);
+            return;
+        }
+
+        const myModalEl = document.getElementById('logModalFullScreen_db_tasks')
+        // myModalEl.addEventListener('shown.bs.modal', event => {
+        // });
+        // myModalEl.addEventListener('hide.bs.modal', event => {
+        // });
+
+
+
+        var log_timer;
+        var status_interval;
+        var first_file_fetched = false;
+        function read_logs(event, task_type, task_segment, task_name, file_name = "") {
+            let time_interval = 2000;
+            let line_no = 0;
+            let element = document.getElementById('LMBTN_task_log_file');
+            if (file_name === "") {
+                element.textContent = "Fetching Files...";
+                $('#txtarea_logs, #LMDD_task_log_file_ul').empty();
+                time_interval = 2;
+                document.getElementById('LMDD_btn_tasks').textContent = $(`#LMDD_task`).find(`li[task_type="${task_type}"][task_segment="${task_segment}"][task_name="${task_name}"] a`).text();;
+            }
+            else if (event) {
+                document.getElementById('LMBTN_task_log_file').textContent = event.target.text || file_name;
+            }
+            else {
+                document.getElementById('LMBTN_task_log_file').textContent = file_name;
+            }
+            if (!$('#LMDD_task_log_file_ul').attr("current_file") || file_name !== $('#LMDD_task_log_file_ul').attr("current_file")) {
+                $('#LMDD_task_log_file_ul').attr("current_file", file_name);
+                $('#LMDD_task_log_file_ul').attr("lines", "1");
+                $('#txtarea_logs').empty().append(`Reading data from: ${file_name}\n\n\n`);
+            }
+
+            let base_url = form_url(`/logs?task_type=${task_type}&task_segment=${task_segment}&task=${task_name}`);
+
+            if (!base_url)
+                return;
+
+            if (log_timer) {
+                try {
+                    clearInterval(log_timer);
+                } catch (e) {
+                    console.error("Error clearing interval:", e);
+                }
+            }
+
+            log_timer = setInterval(function () {
+                let url = base_url;
+                if (file_name === "") {
+                    $('#txtarea_logs, #LMDD_task_log_file_ul').empty();
+                    clearInterval(log_timer);
+                }
+
+                if (file_name !== "") {
+                    line_no = $('#LMDD_task_log_file_ul').attr("lines") || '1';
+                    url = `${base_url}&file_name=${file_name}&lines=${line_no}`;
+                }
+
+                element.classList.add('border-warning');
+                $.get(url)
+                    .done(function (data) {
+                        setTimeout(() => {
+                            element.classList.remove('border-warning');
+                            element.classList.add('border-success');
+                            setTimeout(() => {
+                                element.classList.remove('border-success');
+                            }, 1000);
+                        }, 1000);
+
+                        if (data["error"] && data["error"] !== "") {
+                            let err_msg = data["error"].trim().replace(/^error:\s+/ig, '');
+                            clearInterval(log_timer);
+                            document.getElementById('LMBTN_task_log_file').textContent = err_msg;
+                            alert(err_msg);
+                            return;
+                        }
+
+                        if (file_name !== '') {
+                            let task_status = JSON.parse(data["logs_task_status"]["status"]);
+                            if (!(task_status && task_status[task_type] && task_status[task_type][task_segment] && task_status[task_type][task_segment][task_name]["status"] == 'RUNNING')) {
+                                clearInterval(log_timer);
+                            }
+                            if (data["output"].trim() === "")
+                                return;
+
+                            $('#txtarea_logs').empty().append(escapeHTML(data["output"]));
+
+                        }
+                        else {
+                            let first_file_fetched = false;
+                            data["output"].trim().split('\n').forEach(function (line) {
+                                $('#LMDD_task_log_file_ul').append(`<li><a class="dropdown-item" href="#" onclick="read_logs(event,'${task_type}', '${task_segment}', '${task_name}', '${line}');">${line}</a></li>`);
+                                if (event !== null && !first_file_fetched) {
+                                    read_logs(null, task_type, task_segment, task_name, line);
+                                    first_file_fetched = true;
+                                }
+                            });
+
+
+                        }
+                    })
+                    .fail(function (error) {
+                        clearInterval(log_timer);
+                        if (file_name === "") {
+                            element.classList.add('border-danger');
+                            setTimeout(() => {
+                                element.classList.remove('border-danger');
+                            }, 1000);
+                        }
+                        alert('Error fetching logs:', error);
+                    });
+            }, time_interval);
+        }
+
+        function make_modal(db_config) {
+            const modal_box_form = document.getElementById('dbConfigForm');
+            let formElements = '';
+            // debugger;
+            $.each(db_config, function (key, value) {
+                formElements += `
+                        <div class="form-group row mb-3">
+                            <label for="${key}" class="form-label col-md-3">${value.title}</label>
+                            <input type="${value.type}" name="${key}" class="form-control col-md ms-auto w-auto form-input p-1" id="${key}" required>
+                        </div>
+                    `;
+            });
+
+            // Append all elements at once
+            modal_box_form.innerHTML = formElements + '<button type="submit" class="btn btn-primary">Submit</button>';
+        } // make_modal ends
+
+
+        $('#dbConfigForm').on('submit', function (e) {
+            // debugger;
+            var data = {
+                SYSPWD: "exampleSYSPWD",
+                WLS_PWD: "exampleWLSPWD",
+                APPS_PWD: "exampleAPPS_PWD",
+                SYS_PWD: "exampleSYSPWD",
+                ISG_PWD: "exampleISG_PWD",
+                EBS_SYSTEM_PWD: "exampleEBS_SYSTEM_PWD",
+                t_APPS_PWD: "t_APPS_PWD",
+                SYSTEM_PWD: "SYSTEM_PWD",
+                t_SYSADMIN_PWD: "t_SYSADMIN_PWD",
+                t_ASADMIN_PWD: "t_ASADMIN_PWD",
+                t_APEX_USER: "exampleUser",
+                t_APEX_EMAIL: "example@example.com"
+            };
+
+            let list_data = $('#dbConfigForm').serializeArray();
+            $(list_data).map(function (index, field) {
+                data[field.name] = field.value;
+            });
+
+            e.preventDefault();
+
+            $.ajax({
+                url: '/configs/dbconfig', // Endpoint URL
+                type: 'POST',
+                contentType: 'application/json', // Set the content type to JSON
+                data: JSON.stringify(data), // Convert JavaScript object to JSON string
+                success: function (response) {
+                    appendAlert("Config saved successfully!", "success");
+                    console.log("Success:", response);
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error:", xhr.responseText);
+                    appendAlert(xhr.responseText, "danger");
+                }
+            });
+        });
+
+        function populateTasksTable(tasks, task_type, task_segment, additional_header = '', parent = '') {
+            var tasks = tasks[task_segment];
+            var task_identifier = "";
+            var confirmation_modal_name = "";
+
+            let parent_element = null;
+            if (parent) {
+                parent_element = document.getElementById(`div_content_${parent}`);
+            }
+            else
+                parent_element = document.getElementById(`div_content_${task_type}`);
+
+            if (parent_element === null) {
+                $('#content').append(
+                    get_task_table_container(task_type, tasks["info"]["title"])
+                );
+            }
+            parent_element = document.getElementById(`#div_content_${task_type}`);
+
+            tasks["tasks_order"].forEach(task => {
+                task_identifier = `${task_type}-${task_segment}_${task}`
+                if ($(`#LMDD_task_type_${task_type}`).length === 0) {
+                    $(`#LMDD_task_types`).append(`<li><a id="LMDD_task_type_${task_type}" class="dropdown-item" href="#" onclick="populate_task(event, '${task_type}', '${task_segment}', '${task}');">${task_type}-${task_segment}</a></li>`);
+                }
+                $("#LMDD_task").append(`<li task_type='${task_type}' task_segment='${task_segment}' task_name="${task}"><a class="dropdown-item" href="#" onclick="read_logs(event,'${task_type}','${task_segment}', '${task}');">${task_segment}_${task}</a></li>`);
+                confirmation_modal_name = "show_confirmation_modal";
+                if (`${task_type}-${task_segment}` === "patch-adop") {
+                    confirmation_modal_name = "show_patch_adop_confirmation_modal";
+                }
+
+                let tasks_row = `${additional_header}<tr data-bs-toggle="collapse" data-bs-target="#${task_identifier}-subtasks" class="clickable collapsed" aria-expanded="false">`;
+                additional_header = '';
+
+                tasks_row += `
+                        <td>${tasks[task]["title"]}</td>
+                        <td class="${getStatusClass(task.state) || 'NA '}">
+                            <div id="alert_circle_${task_identifier}" class="rounded-circle float-start alert-circle"></div>
+                            <label id="lbl_status_${task_identifier}" class="lbl-status">
+                                ${task.state || 'NA'}
+                            </label>
+                        </td>
+                        <td>
+                            <label id="lbl_exec_date_${task_identifier}">
+                                ${task.lastExecutionDate || 'N/A'}
+                            </label>
+                        </td>
+                        <td class="${getStatusClass(task.lastStatus) || 'NA'}">
+                            <label id="lbl_last_status_${task_identifier}">
+                                ${task.lastStatus || 'N/A'}
+                            </label>
+                        </td>
+                        <td>
+                            
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="resume_${task_identifier}" onclick="switch_resume(event, '${task_type}','${task_segment}', '${task}');" title="Resume">
+
+                                <button class="btn btn-sm btn-success btn-resume custom-button" id="start_${task_identifier}" onclick="${confirmation_modal_name}(event, '${task_type}', '${task_segment}', '${task}');">Start</button>
+                                <button class="btn btn-sm btn-danger btn-resume custom-button" id="abort_${task_identifier}" onclick="abort('${task_type}', '${task_segment}', '${task}')">Abort</button>
+
+                            </div>
+
+                        </td>
+                    `;
+                $(`#${parent || task_name}-tbody-main`).append(tasks_row);
+
+                if (tasks[task]["tasks_order"].length == 0) {
+                    return;
+                }
+
+                let sub_task_rows = '';
+                tasks[task]["tasks_order"].forEach(function (subtask) {
+                    if (!/desc/.test(subtask)) {
+                        sub_task_rows += `<tr>
+                        <td>${subtask}</td>
+                        <td class="">NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>
+                            <button class="btn btn-sm btn-success">Start</button>
+                            <button class="btn btn-sm btn-danger">Abort</button>
+                        </td>
+                    </tr>`;
+                    }
+                });
+                let child_table = `
+                        <tr class="collapse" id="${task_name}-${task}-subtasks">
+                            <td colspan="5">
+                                <table class="table">
+                                    <tbody>${sub_task_rows}</tbody>
+                                </table>
+                            </td>
+                        </tr>`;
+                $(`#${task_name}-tbody-main`).append(child_table);
+
+            });
+            let parentElement = document.getElementById('LMDD_task');
+        }
+
+        function getStatusClass(status) {
+            if (status === undefined)
+                return 'NA';
+            switch (status.toLowerCase()) {
+                case 'not started': return 'status-not-started';
+                case 'running': return 'status-running';
+                case 'passed': return 'status-passed';
+                case 'failed': return 'status-failed';
+                default: return '';
+            }
+        }
+
+        function call_script_post(task_type, task_segment, task, params) {
+            let json_params = {};
+            var update_status_task_arg = null;
+            clearInterval(status_interval);
+
+            json_params["task_type"] = task_type;
+            json_params["task_segment"] = task_segment;
+            json_params["env"] = get_stored_env();
+
+            var url = `/run/${task_type}`;
+
+            if (!url)
+                return;
+
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: JSON.stringify({ ...json_params, ...params }),
+                contentType: "application/json"
+            }).done(function (data) {
+                if (/already running/.test(data["output"])) {
+                    appendAlert("Task already running", "warning");
+                    return;
+                }
+                else {
+                    appendAlert(`${task} Submitted`, "success");
+                }
+                update_status(update_status_task_arg);
+                update_task_status(update_status_task_arg);
+            }).fail(function (error) {
+                const status = error.status;
+                if (status == 401) {
+                    appendAlert("Unauthorized! Kindly Log In!!", "danger");
+                    show_login_modal();
+                }
+                else if (status == 403) {
+                    appendAlert("Forbidden!", "danger");
+                }
+                else if (status == 404) {
+                    appendAlert("Task not found.", "danger");
+                }
+                else if (status == 500) {
+                    appendAlert("Internal server error", "danger");
+                }
+                else {
+                    appendAlert("Unknown error occurred", "danger");
+                }
+                console.error('Error fetching running status', error);
+            });
+
+
+        }
+        function call_script(task_type, task_segment, task) {
+            var update_status_task_arg = null;
+            clearInterval(status_interval);
+
+            var url = `/run`;
+            if ($(`#resume_${task_type}-${task_segment}_${task}`).is(':checked')) {
+                url = `/resume`;
+                update_status_task_arg = task;
+            }
+
+            url = form_url(url, "call_script");
+            if (!url)
+                return;
+
+            url = `${url}&task_type=${task_type}&task_segment=${task_segment}&task=${task}`;
+
+            $.get(url)
+                .done(function (data) {
+                    if (/already running/.test(data["output"])) {
+                        appendAlert("Task already running", "warning");
+                        return;
+                    }
+                    else {
+                        appendAlert(`${task} Submitted`, "success");
+                    }
+                    update_status(update_status_task_arg);
+                    update_task_status(update_status_task_arg);
+                })
+                .fail(function (error) {
+                    const status = error.status;
+                    if (status == 401) {
+                        appendAlert("Unauthorized! Kindly Log In!!", "danger");
+                        show_login_modal();
+                    }
+                    else if (status == 403) {
+                        appendAlert("Forbidden!", "danger");
+                    }
+                    else if (status == 404) {
+                        appendAlert("Task not found.", "danger");
+                    }
+                    else if (status == 500) {
+                        appendAlert("Internal server error", "danger");
+                    }
+                    else {
+                        appendAlert("Unknown error occurred", "danger");
+                    }
+                    console.error('Error fetching running status', error);
+                });
+        }
+
+        function switch_resume(event, task_type, task_segment, task) {
+            let task_identifier = `${task_type}-${task_segment}_${task}`;
+            if (event.target.checked) {
+                $(`#start_${task_identifier}`).text("Resume");
+            }
+            else {
+                $(`#start_${task_identifier}`).text("Start");
+            }
+        }
+
+        function show_log_modal(event, task_type, task_segment, task) {
+            const log_modal = new bootstrap.Modal('#logModalFullScreen_db_tasks');
+            log_modal.show();
+            setTimeout(function () {
+                populate_task(event, task_type, task_segment, task);
+                read_logs(event, task_type, task_segment, task);
+            }, 100);
+
+            document.getElementById('logModalFullScreen_db_tasks').addEventListener('hidden.bs.modal', function (event) {
+                clearInterval(log_timer);
+                console.log('Modal was closed');
+            });
+        }
+
+        function show_login_modal(event, task) {
+            const login_modal = new bootstrap.Modal('#login_modal_static_backdrop');
+            login_modal.show();
+        }
+
+        function show_confirmation_modal(event, task_type, task_segment, task) {
+            event.preventDefault();
+            event.stopPropagation();
+            const task_identifier = `${task_type}-${task_segment}_${task}`;
+            const corfirmation_model = new bootstrap.Modal('#confirmation_static_backdrop');
+            $('label[id^="confirm_modal_label"]').text("");
+
+            let env = get_stored_env();
+            let resume_or_start = $(`#start_${task_identifier}`).text();
+            let task_obj = _config["tasks"][task_type][task_segment][task];
+
+            $('#confirm_modal_label_task').text(task_obj["title"]);
+            $('#confirm_modal_label_env').text(_config["envs"][env]);
+
+            $('#confirmation_modal_start_button').text(resume_or_start).off("click").on("click", function () {
+                call_script(task_type, task_segment, task);
+                corfirmation_model.hide();
+            });
+
+            corfirmation_model.show();
+        }
+
+        function get_patch_adop_json(task_type, task_segment, task) {
+            const tasks = _config["tasks"][task_type][task_segment]["tasks_order"];
+
+            const result = {};
+
+            tasks.forEach(atask => {
+                if (!$(`input[id^="select_${task_type}-${task_segment}_${atask}"]`).is(":checked"))
+                    return;
+                let args = document.getElementById(`args_${task_type}-${task_segment}_${atask}`)?.value.trim() || "";
+                if (args !== "")
+                    result[`task__${atask}`] = args;
+            });
+
+            return result;
+        }
+
+        function show_patch_adop_confirmation_modal(event, task_type, task_segment, task) {
+            event.preventDefault();
+            event.stopPropagation();
+            const task_identifier = `${task_type}-${task_segment}_${task}`;
+            const patch_adop_launch_modal = new bootstrap.Modal(`#${task_type}-${task_segment}_static_backdrop`);
+            $(`label[id^="${task_type}-${task_segment}_confirmation_modal_label"]`).text("");
+
+            let env = get_stored_env();
+            let resume_or_start = $(`#start_${task_identifier}`).text();
+
+            $(`#${task_type}-${task_segment}_confirm_modal_label_env`).text(_config["envs"][env]);
+
+            $(`#${task_type}-${task_segment}_confirmation_modal_start_button`).text(resume_or_start).off("click").on("click", function () {
+                call_script_post(task_type, task_segment, task, get_patch_adop_json(task_type, task_segment, task));
+                patch_adop_launch_modal.hide();
+            });
+
+            if ($(`input[id^='select_${task_type}-${task_segment}_']`).length == 0) {
+                let parent_element = $(`#${task_type}-${task_segment}_modal_tbody`);
+                let tasks = _config["tasks"][task_type][task_segment];
+                let tasks_row = '';
+                tasks["tasks_order"].forEach(task => {
+                    let task_identifier = `${task_type}-${task_segment}_${task}`;
+                    tasks_row = `${tasks_row}<tr>`;
+                    tasks_row += `
+                        <td style="width:250px;">
+                            <input type="checkbox" class="patch_adop_selector" id="select_${task_identifier}" name="select_${task_identifier}" />
+
+                            ${tasks[task]["title"]}
+                        </td>
+                        
+                        <td>
+                            <textarea id="args_${task_identifier}" name="args_${task_identifier}" disabled></textarea>
+                        </td>
+                    `;
+                });
+                $(parent_element).empty().append(tasks_row);
+                $(`input[id^="select_${task_type}-${task_segment}"]`).change(function () {
+                    let text_area_id = $(this).attr('id').replace('select_', 'args_');
+                    document.getElementById(`${text_area_id}`).disabled = !$(this).is(':checked');
+                })
+            } // populate the modal only first time
+
+            patch_adop_launch_modal.show();
+        }
+
+        function current_user_management(event) {
+            const user_modal = new bootstrap.Modal('#current_user_management_modal');
+            user_modal.show();
+        }
+
+        function show_user_mgmt_modal(event, task) {
+            // var user_modal = new bootstrap.Modal('#user_management_static_backdrop');
+            // user_modal.show().load("/users.html");
+
+            // $('#user_management_static_backdrop').modal('show').load("/users.html");
+            var userModalElement = document.getElementById('user_management_static_backdrop');
+            var user_modal = new bootstrap.Modal(userModalElement);
+            var modalBody = userModalElement.querySelector('.modal-body'); // Target the body
+
+            // Fetch content and load it, *then* show modal (or show while loading)
+            fetch('/users.html')
+                .then(response => response.ok ? response.text() : Promise.reject('Failed to load'))
+                .then(html => {
+                    modalBody.innerHTML = html; // Load into the body
+                    user_modal.show();          // Now show the modal
+                })
+                .catch(error => {
+                    console.error("Error loading modal content:", error);
+                    modalBody.innerHTML = "<p>Error loading content.</p>";
+                    user_modal.show(); // Optionally show modal even on error
+                });
+
+        }
+
+        function update_task_status(task) {
+            status_interval = setInterval(function () {
+                update_status(task);
+            }, 5000);
+        }
+        function update_status(task_arg) {
+            let url = '/status';
+            url = form_url(url, "status");
+            if (!url)
+                return;
+
+            $.get(url)
+                .done(function (tasks) {
+                    let ping_status = [];
+
+                    tasks["status"] = JSON.parse(tasks["status"]);
+
+                    let status_obj = tasks["status"];
+                    Object.keys(status_obj).forEach(task_type => {
+                        Object.keys(status_obj[task_type]).forEach(task_segment => {
+                            Object.keys(status_obj[task_type][task_segment]).forEach(task => {
+                                let task_obj = status_obj[task_type][task_segment][task];
+
+                                let full_task_name = `${task_type}-${task_segment}_${task}`;
+
+                                $(`label[id^="lbl_status_${full_task_name}"]`).text("NA");
+                                $(`label[id^="lbl_exec_date_${full_task_name}"]`).text("--");
+                                $(`label[id^="lbl_last_status_${full_task_name}"]`).text("--");
+                                $(`div[id^="alert_circle_${full_task_name}"]`).css('background-color', "");
+
+                                let task_stat = task_obj["status"].toUpperCase();
+                                let task_time = task_obj["start"];
+                                let end_time = task_obj["end"];
+
+                                let status_link = `<a href="#" onclick="show_log_modal(event, '${task_type}','${task_segment}', '${task}')">${task_stat}</a>`;
+                                let date_link = `<a href="#" onclick="show_log_modal(event, '${task_type}', '${task_segment}', '${task}')">${task_time}</a>`
+                                let end_link = `<a href="#" onclick="show_log_modal(event, '${task_type}', '${task_segment}', '${task}')">${end_time}</a>`;
+                                if (/QUEUED|upstream failed/i.test(task_stat)) {
+                                    status_link = task_stat;
+                                    date_link = task_time;
+                                    end_link = end_time;
+                                }
+
+                                $(`#lbl_status_${full_task_name}`).html(status_link);
+                                $(`#lbl_exec_date_${full_task_name}`).html(date_link);
+                                if (end_time == '--')
+                                    end_link = end_time;
+
+                                $(`#lbl_last_status_${full_task_name}`).html(end_link);
+
+                                switch (task_stat) {
+                                    case 'COMPLETED':
+                                        $(`#alert_circle_${full_task_name}`).css('background-color', "green");
+                                        break;
+                                    case 'RUNNING':
+                                        ping_status.push(1);
+                                        $(`#alert_circle_${full_task_name}`).css('background-color', "yellow");
+                                        break;
+                                    case 'QUEUED':
+                                        ping_status.push(1);
+                                        $(`#alert_circle_${full_task_name}`).css('background-color', "grey");
+                                        break;
+                                    case 'FAILED':
+                                        $(`#alert_circle_${full_task_name}`).css('background-color', "red");
+                                        break;
+                                }
+
+
+                            });
+                        });
+                    });
+                    let ping_status_sum = ping_status.reduce((a, b) => a + b, 0);
+                    if (ping_status_sum == 0) {
+                        clearInterval(status_interval);
+                    }
+                })
+                .fail(function (error) {
+                    console.error('Error fetching status', error);
+                });
+        }
+
+        const alertPlaceholder = document.getElementById('alert_placeholder');
+        const appendAlert = (message, type, seconds = 2.5) => {
+            if (type == "danger")
+                seconds = 5;
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} role="alert">`,
+                `   <div class="text-center">${message}</div>`,
+                // '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('');
+
+            alertPlaceholder.append(wrapper);
+
+            setTimeout(function () {
+                $(wrapper).slideDown(500, function () {
+                    $(this).remove();
+                });
+            }, seconds * 1000);
+        }
+
+        function login() {
+            let user = $('#login_user').val();
+            let password = $('#login_password').val();
+            if (user === "" || password === "") {
+                appendAlert("Kindly enter User ID and Password", "danger");
+                return;
+            }
+            $.post('/login', { username: user, password: password })
+                // $.post('/auth/jwt/login', { username: user, password: password })
+                .done(function (data) {
+                    if (data["status"] == "success") {
+                        appendAlert("Login successful", "success");
+                        $('#login_modal_static_backdrop').modal('hide');
+                        $("#span_logged_in_user_name").text(user);
+                        $('a[id^="nav_user"]').toggle();
+                    } else {
+                        appendAlert(data["message"], "danger");
+                    }
+                })
+                .fail(function (error) {
+                    console.error('Login Error', error);
+                    appendAlert(error, "danger");
+                });
+        }
+
+        function change_pass() {
+            let old_pass = $('#old_pass').val();
+            let new_pass = $('#new_pass').val();
+            let renew_pass = $('#renew_pass').val();
+
+            if (new_pass !== renew_pass) {
+                appendAlert("New Password and Re-type Password do not match", "danger");
+                return;
+            }
+
+            $.post('/reset-pass', { new_password: new_pass, old_password: old_pass })
+                .done(function (data) {
+                    if (data["status"] == "success") {
+                        appendAlert("Password changed successfully", "success");
+                        $('#current_user_management_modal').modal('hide');
+                    } else {
+                        appendAlert(data["message"], "danger");
+                    }
+                })
+                .fail(function (error) {
+                    console.error('Change Password Error', error);
+                    appendAlert(error, "danger");
+                });
+        }
+
+
+        function get_user() {
+            $.get('/users/me')
+                .done(function (data) {
+                    if (data["status"] == "success") {
+                        $("#span_logged_in_user_name").text(data["email"]);
+                        $('a[id^="nav_user"]').toggle();
+                    } else {
+                        appendAlert(data["message"], "danger");
+                    }
+                })
+                .fail(function (error) {
+                    console.error('Login Error', error);
+                    if (error.status == 401) {
+                        appendAlert("Kindly Log In!!", "warning");
+                    }
+                    else if (error.status == 403) {
+                        appendAlert("Forbidden!", "danger");
+                    }
+                    else if (error.status == 404) {
+                        appendAlert("User not found.", "warning");
+                    }
+                    else if (error.status == 500) {
+                        appendAlert("Internal server error", "warning");
+                    }
+                    else {
+                        appendAlert("Unknown error occurred", "warning");
+                    }
+                });
+        }
+
+    </script>
+
+</html>

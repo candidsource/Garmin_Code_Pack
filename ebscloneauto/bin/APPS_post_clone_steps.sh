@@ -1,0 +1,60 @@
+ENV=orbupg
+SCRIPT=/mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/clone
+BIN_DIR=/mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/bin
+. /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/bin/run.env
+
+. ${TGT_BASE_FS}/EBSapps.env run
+
+##SK##echo "disable jobs as system user" | tee -a ${APPLOG}
+##SK##echo "disable jobs as system user" | tee -a ${APPLOG}
+##SK##echo ${SYSTEM_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_disable_scheduler_jobs_02.sql | tee -a ${APPLOG}
+
+##SK##echo "Update User Profile for ICM Forms Launch" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_update_users_profile.sql | tee -a ${APPLOG}
+
+##SK##echo "Unbbreak dba job 7743" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_unbroken.sql 7743 | tee -a ${APPLOG}
+
+##SK##echo "Update Concurrent table with node Name" | tee -a ${APPLOG}
+##SK##${SCRIPT}/../bin/${ENV}_update_conc_mgr_nodes.sh | tee -a ${APPLOG}
+
+##SK##echo "Create cloning related database packages" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_XX_COMPILE_POST_CLONE_PACKAGE.sql | tee -a ${APPLOG}
+
+##SK##echo "Update IBY tables" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_insert_iby_bep_acct_opt_vals.sql | tee -a ${APPLOG}
+
+##SK##echo "Scrub customer email addresses into the database - XX_POST_CLONE_STEPS_1" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_XX_POST_CLONE_STEPS_1.sql | tee -a ${APPLOG}
+
+##SK##echo "Scrub Credit Card Data - XX_POST_CLONE_STPE_2" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_XX_POST_CLONE_STEPS_2.sql | tee -a ${APPLOG}
+
+##SK##echo "XX_POST_CLONE_STEPS_3a" | tee -a ${APPLOG}
+##SK##echo ${SYSTEM_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_XX_POST_CLONE_STEPS_3a.sql ${S_PDB_NAME} ${S_PDB_NAME} | tee -a ${APPLOG}
+
+##SK##echo "step217" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_step217.sql | tee -a ${APPLOG}
+
+##SK##echo "Post Clone script XX_POST_CLONE_STEPS_4" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_XX_POST_CLONE_STEPS_4.sql | tee -a ${APPLOG}
+
+##SK##echo "Post Clone script XX_POST_CLONE_STEPS_4C" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_XX_POST_CLONE_STEPS_4C.sql | tee -a ${APPLOG}
+
+##SK##echo "Post Clone script XX_POST_CLONE_STEPS_6" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_XX_POST_CLONE_STEPS_6.sql | tee -a ${APPLOG}
+
+##SK##echo "Post Clone script XX_POST_CLONE_STEPS_5" | tee -a ${APPLOG}
+##SK##echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/${ENV}_XX_POST_CLONE_STEPS_5.sql | tee -a ${APPLOG}
+
+echo "Post Clone Update user level profile values for iSupplier Users" | tee -a ${APPLOG}
+echo ${t_APPS_PWD} | sqlplus "/nolog" @${SCRIPT}/pos_upg_usr.sql | tee -a ${APPLOG}
+
+echo "Restore Agile property files After the clone"
+cp ${SCRIPT}/${ENV}_CommonLogin.properties $GARM_JAVA_TOP/CommonLogin.properties
+cp -r ${SCRIPT}/${TGT_RUN_FS}_custom${PDB_NAME}_`hostname`.env $INST_TOP/appl/admin/custom${PDB_NAME}_`hostname`.env
+cp -r ${SCRIPT}/${TGT_RUN_FS}_custom${PDB_NAME}_${HA_NODE}.env $INST_TOP/appl/admin/custom${PDB_NAME}_${HA_NODE}.env
+
+echo "Wallet creation for Payment Module" | tee -a ${APPLOG}
+${SCRIPT}/../bin/${ENV}_wallet_payment_module.sh| tee -a ${APPLOG}

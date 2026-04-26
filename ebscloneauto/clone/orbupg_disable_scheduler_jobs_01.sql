@@ -1,0 +1,7 @@
+conn apps@ORBUPG
+
+exec DBMS_SCHEDULER.disable('XX_CHECK_LOCK_WAITERS_JOB');
+exec DBMS_SCHEDULER.disable('XX_CHECK_MWA_LOCKS_JOB');
+
+exit
+

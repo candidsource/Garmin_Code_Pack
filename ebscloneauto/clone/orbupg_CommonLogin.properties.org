@@ -1,0 +1,52 @@
+DEVORACLE_CONNECTSTRING = jdbc:oracle:thin:@//qed1-scan.garmin.com:1522/ORBDEV_SERVICE
+DEVORACLE_USER = apps
+DEVORACLE_PSWD = devmarch
+
+DEVAGILE_CONNECTSTRING = jdbc:oracle:thin:@//OLAXD-agiledb.garmin.com:1521/Agdev
+DEVAGILE_USER = garmin
+DEVAGILE_PSWD = garm1ndev
+
+DEVAGILE_SESSION_USER=wfmgr
+DEVAGILE_SESSION_PSWD =agile
+DEVAGILE_SESSION_URL=http://olaxd-agiledb.garmin.com:7777/Agdev
+
+TSTORACLE_CONNECTSTRING = jdbc:oracle:thin:@//qed1-scan.garmin.com:1522/ORBTST_SERVICE
+TSTORACLE_USER = apps
+TSTORACLE_PSWD = supertst100
+
+TSTAGILE_CONNECTSTRING = jdbc:oracle:thin:@//OLAXT-agiledb.garmin.com:1521/agtst
+TSTAGILE_USER = garmin
+TSTAGILE_PSWD = garm3tst
+
+TSTAGILE_SESSION_USER=wfmgr
+TSTAGILE_SESSION_PSWD =agile
+TSTAGILE_SESSION_URL=http://olaxt-agiledb.garmin.com:7777/Agtst
+
+QAORACLE_CONNECTSTRING = jdbc:oracle:thin:@//qed1-scan.garmin.com:1522/ORBQA_SERVICE
+QAORACLE_USER = apps
+QAORACLE_PSWD = superqaoct
+
+QAAGILE_CONNECTSTRING = jdbc:oracle:thin:@//olaxqdb01.garmin.com:1535/AGQAN
+QAAGILE_USER = garmin
+QAAGILE_PSWD = garmqa
+
+QAAGILE_SESSION_USER=wfmgr
+QAAGILE_SESSION_PSWD =t0day
+QAAGILE_SESSION_URL=//agileqan.garmin.com/Agile
+
+PRDORACLE_CONNECTSTRING = jdbc:oracle:thin:@//cv1xpd-rac102vip.garmin.com:1565/ORBIT
+PRDORACLE_USER = garmin
+PRDORACLE_PSWD = qxwr_AL78KZXZ7zCI_Jcp 
+
+PRDAGILE_CONNECTSTRING = jdbc:oracle:thin:@//cv1xpd-agl01.garmin.com:1521/agprd
+PRDAGILE_USER = garmin
+PRDAGILE_PSWD = X1T#1LnLeb2eW
+
+PRDAGILE_SESSION_USER= wfmgr
+PRDAGILE_SESSION_PSWD = t0day
+PRDAGILE_SESSION_URL=https://agile936.garmin.com/Agile
+
+AML_INTEGRATION_GO_BACK_DAYS = 1
+
+LastUpdateBy=wfmgr
+

@@ -1,0 +1,25 @@
++---------------------------------------------------------------------------+
+Application Object Library: Version : 12.2
+
+Copyright (c) 1998, 2013, Oracle and/or its affiliates. All rights reserved.
+
+FNDCPASS: 
++---------------------------------------------------------------------------+
+
+Current system time is 27-MAR-2026 22:08:19
+
++---------------------------------------------------------------------------+
+
+Arguments
+ 
+   FNDCPASS system/***** ORACLE APPLSYSPUB ***** 
++----------------------------------------------------------------------------+
+Working...
+Password is changed successfully for user APPLSYSPUB.
+FNDCPASS completed successfully.
+
++---------------------------------------------------------------------------+
+Concurrent request completed successfully
+Current system time is 27-MAR-2026 22:08:20
+
++---------------------------------------------------------------------------+

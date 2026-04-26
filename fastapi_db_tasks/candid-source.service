@@ -1,0 +1,14 @@
+[Unit]
+Description=Candid Source EBS Autoclone
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/stage1/fastapi_db_tasks
+ExecStart=/stage1/fastapi_db_tasks/server.sh -s
+ExecStop=/stage1/fastapi_db_tasks/server.sh -x
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

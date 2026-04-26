@@ -1,0 +1,43 @@
+#############################################################################
+#         This file stores the UTL FILE DIR parameter values used           #
+#                    by various EBS product teams                           #
+#                                                                           #
+#       ***** DO NOT CHANGE THE NAME OR LOCATION OF THIS FILE *****         #
+#                                                                           #
+# IMPORTANT NOTES:                                                          #
+# ================                                                          #
+#                                                                           #
+# 1. OS path should not be a symbolic link                                  #
+#                                                                           #
+# 2. OS path given in the list should physically exist with proper          #
+#    permissions                                                            #
+#                                                                           #
+# 3. OS path /usr/tmp which generally is a symbolic link is replaced with   #
+#    <ORACLE_BASE>/temp/<PDB_NAME>                                          #
+#                                                                           #
+#    Make sure that OS path <ORACLE_BASE>/temp/<PDB_NAME> exists            #
+#                                                                           #
+# 4. <APPLPTMP> variable on Apps Tier should match with one of the OS paths #
+#    in the list. Otherwise you need to modify <APPLPTMP> on all Apps tiers #
+#    and run Autoconfig                                                     #
+#                                                                           #
+# 5. Ensure that all the paths defined in this file exist physically on the #
+#    server                                                                 #
+#                                                                           #
+# 6. Maximum allowed length of UTL_FILE_DIR parameter (combined length of   #
+#    all paths separated by commas) is 4000 characters, hence ensure that   #
+#    value does not exceed the limit                                        #
+#                                                                           #
+#===========================================================================#
+# For reference, original contents of UTL_FILE_DIR without any updates are  #
+# retained in below file:                                                   #
+#                                                                           #
+# /u01/app/oracle/product/19.0.0/ORBUPG/appsutil/log/TXK_UTIL_DIR_Mon_May_1_07_11_02_2023/ORBUPG_utlfiledir.txt
+#############################################################################
+
+
+/u02/ORBUPG/GRMNtmp
+/u01/app/oracle/product/19.0.0/temp/ORBUPG
+/u02/ORBUPG/APPLPTMP
+/austin/data/interface/ORBUPG/EDI/edi_inbound
+/austin/data/interface/ORBUPG/EDI/edi_outbound

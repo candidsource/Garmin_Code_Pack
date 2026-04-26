@@ -1,0 +1,404 @@
+{
+    "_envs": [],
+    "full": {
+        "check_asm": {
+            "title": "Check ASM Space",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:36",
+                    "notes": ""
+                },
+                {
+                    "completed": false,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:39",
+                    "notes": ""
+                },
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:43",
+                    "notes": ""
+                },
+                {
+                    "completed": false,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-17 10:23:28",
+                    "notes": ""
+                },
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-17 10:23:33",
+                    "notes": ""
+                }
+            ]
+        },
+        "notify_non_prod": {
+            "title": "Notify Non-Prod Users #IT-EBA-NON-PROD",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:41",
+                    "notes": ""
+                }
+            ]
+        },
+        "compare_patches": {
+            "title": "Check and Compare Patches in TECH STACK",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:44",
+                    "notes": ""
+                }
+            ]
+        },
+        "finalize_db_params": {
+            "title": "Finalize DB parameters if there is any changes",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:45",
+                    "notes": ""
+                }
+            ]
+        },
+        "save_dba_dirs": {
+            "title": "Save DBA Directories List",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:46",
+                    "notes": ""
+                }
+            ]
+        },
+        "notify_twmis_dba": {
+            "title": "Notify TWMIS;#IT-EBA-Non-ProdEBSASCPDemantra-AllUsers@garmin.com",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:47",
+                    "notes": ""
+                }
+            ]
+        },
+        "check_run_fs": {
+            "title": "Make Sure CLONE_FROM and CLONE_TO has SAME RUN FS",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:48",
+                    "notes": ""
+                }
+            ]
+        },
+        "preclone_prod": {
+            "title": "Complete Preclone in PROD",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:49",
+                    "notes": ""
+                }
+            ]
+        },
+        "verify_cc_clone_to": {
+            "title": "Verify Credit Card Process is working in CLONE_TO Env",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:51",
+                    "notes": ""
+                }
+            ]
+        },
+        "disable_rman_clone_to": {
+            "title": "Disable CLONE_TO RMAN Backup in OEM or Crontab",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:52",
+                    "notes": ""
+                }
+            ]
+        },
+        "check_dataguard_sync": {
+            "title": "Make sure Dataguard is sync'd up with Primary",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:54",
+                    "notes": ""
+                }
+            ]
+        },
+        "check_nfs_space": {
+            "title": "Check Free Space in /mnt/nfs",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:55",
+                    "notes": ""
+                }
+            ]
+        },
+        "check_adop_cycle": {
+            "title": "Make sure ADOP patching cycle is complete in CLONE_FROM",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:56",
+                    "notes": ""
+                }
+            ]
+        },
+        "backup_appl_top": {
+            "title": "Backup CLONE_FROM Application File System APPL_TOP for clone",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:57",
+                    "notes": ""
+                }
+            ]
+        },
+        "backup_resp_clone_to": {
+            "title": "Backup Responsibiltiies granted in CLONE_TO",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:58",
+                    "notes": ""
+                }
+            ]
+        },
+        "backup_dblink_clone_to": {
+            "title": "Backup DB Links from CLONE_TO",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:59",
+                    "notes": ""
+                }
+            ]
+        },
+        "blackout_clone_to": {
+            "title": "Blackout CLONE_TOP in OEM for 1 Week",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:04:00",
+                    "notes": ""
+                }
+            ]
+        },
+        "update_confluence": {
+            "title": "Update Confluence Page about the enironment down for clone",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:04:01",
+                    "notes": ""
+                }
+            ]
+        },
+        "save_rman_config": {
+            "title": "Save CLONE_TO environment RMAN Configuration",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:04:02",
+                    "notes": ""
+                }
+            ]
+        },
+        "orbtst_temp_check": {
+            "title": "ORBTST Step Only - Check for XX_TEMP file sizes",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:04:04",
+                    "notes": ""
+                }
+            ]
+        },
+        "update_init_asm": {
+            "title": "Update Init parameter file with correct ASM Diskgroup Names",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:04:05",
+                    "notes": ""
+                }
+            ]
+        },
+        "save_vertex_config": {
+            "title": "Save Vertex Configuration",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:04:05",
+                    "notes": ""
+                }
+            ]
+        },
+        "validate_giqc": {
+            "title": "Validate GIQC working in CLONE_TO",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:04:06",
+                    "notes": ""
+                }
+            ]
+        },
+        "apex_preclone": {
+            "title": "Complete APEX Preclone Steps",
+            "data": [
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:31",
+                    "notes": ""
+                },
+                {
+                    "completed": false,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:03:32",
+                    "notes": ""
+                },
+                {
+                    "completed": true,
+                    "completed_by": "laks@candidsource.com",
+                    "completed_at": "2026-02-13 00:04:07",
+                    "notes": ""
+                }
+            ]
+        }
+    },
+    "fast": {
+        "check_asm": {
+            "title": "Check ASM Space",
+            "data": []
+        },
+        "notify_non_prod": {
+            "title": "Notify Non-Prod Users #IT-EBA-NON-PROD",
+            "data": []
+        },
+        "compare_patches": {
+            "title": "Check and Compare Patches in TECH STACK",
+            "data": []
+        },
+        "finalize_db_params": {
+            "title": "Finalize DB parameters if there is any changes",
+            "data": []
+        },
+        "save_dba_dirs": {
+            "title": "Save DBA Directories List",
+            "data": []
+        },
+        "notify_twmis_dba": {
+            "title": "Notify TWMIS - DBA at Taiwan; #IT-EBA-Non-ProdEBSASCPDemantra-AllUsers@garmin.com",
+            "data": []
+        },
+        "check_run_fs": {
+            "title": "Make Sure CLONE_FROM and CLONE_TO has SAME RUN FS",
+            "data": []
+        },
+        "preclone_prod": {
+            "title": "Complete Preclone in PROD",
+            "data": []
+        },
+        "verify_cc_clone_to": {
+            "title": "Verify Credit Card Process is working in CLONE_TO Env",
+            "data": []
+        },
+        "disable_rman_clone_to": {
+            "title": "Disable CLONE_TO RMAN Backup in OEM or Crontab",
+            "data": []
+        },
+        "check_dataguard_sync": {
+            "title": "Make sure Dataguard is sync'd up with Primary",
+            "data": []
+        },
+        "check_nfs_space": {
+            "title": "Check Free Space in /mnt/nfs - Should have atleast 150GB Free Space",
+            "data": []
+        },
+        "check_adop_cycle": {
+            "title": "Make sure ADOP patching cycle is complete in CLONE_FROM",
+            "data": []
+        },
+        "backup_appl_top": {
+            "title": "Backup CLONE_FROM Application File System APPL_TOP for clone",
+            "data": []
+        },
+        "backup_resp_clone_to": {
+            "title": "Backup Responsibiltiies granted in CLONE_TO",
+            "data": []
+        },
+        "backup_dblink_clone_to": {
+            "title": "Backup DB Links from CLONE_TO",
+            "data": []
+        },
+        "blackout_clone_to": {
+            "title": "Blackout CLONE_TOP in OEM for 1 Week",
+            "data": []
+        },
+        "update_confluence": {
+            "title": "Update Confluence Page about the enironment down for clone",
+            "data": []
+        },
+        "save_rman_config": {
+            "title": "Save CLONE_TO environment RMAN Configuration",
+            "data": []
+        },
+        "orbtst_temp_check": {
+            "title": "ORBTST Step Only - Check for XX_TEMP file sizes",
+            "data": []
+        },
+        "update_init_asm": {
+            "title": "Update Init parameter file with correct ASM Diskgroup Names for Datafiles,controlfiles,logfiles",
+            "data": []
+        },
+        "save_vertex_config": {
+            "title": "Save Vertex Configuration",
+            "data": []
+        },
+        "validate_giqc": {
+            "title": "Validate GIQC working in CLONE_TO",
+            "data": []
+        },
+        "apex_preclone": {
+            "title": "Complete APEX Preclone Steps",
+            "data": []
+        }
+    },
+    "_env_specific_checklists": {}
+}

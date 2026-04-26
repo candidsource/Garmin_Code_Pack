@@ -1,0 +1,20 @@
+SDU=32767
+ORA_NLS10=$ORACLE_HOME/nls/data/9idata
+INBOUND_CONNECT_TIMEOUT_ORBUPGCD_DR=200
+
+ORBUPGCD_DR =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+      (ADDRESS_LIST =
+        (ADDRESS = (PROTOCOL = TCP)(HOST = kc3xsd-rac301-dr-vip.garmin.com)(PORT = 1531)(IP = FIRST))
+       )
+    )
+  )
+
+SID_LIST_ORBUPGCD_DR =
+  (SID_LIST =
+    (SID_DESC = (global_dbname=ORBUPGCD)(ORACLE_HOME = /u01/app/oracle/product/19.0.0/ORBUPG)(SID_NAME = ORBUPGCD1))
+  )
+
+USE_SID_AS_SERVICE_ORBUPGCD_DR            = ON
+

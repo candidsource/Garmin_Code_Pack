@@ -1,0 +1,51 @@
+{
+    "SYSPWD": {
+        "title": "SYS",
+        "type": "password"
+    },
+    "WLS_PWD": {
+        "title": "Weblogic",
+        "type": "password"
+    },
+    "APPS_PWD": {
+        "title": "Apps",
+        "type": "password"
+    },
+    "SYS_PWD": {
+        "title": "Sys", 
+        "type": "password"
+    },
+    "ISG_PWD": {
+        "title": "ISG",
+        "type": "password"
+    },
+    "EBS_SYSTEM_PWD": {
+        "title": "EBS",
+        "type": "password"
+    },
+    "t_APPS_PWD": {
+        "title": "T_APPS",
+        "type": "password"
+    },
+    "SYSTEM_PWD": {
+        "title": "SYSTEM",
+        "type": "password"
+    },
+    "t_SYSADMIN_PWD": {
+        "title": "T_SYSADMIN",
+        "type": "password"
+    },
+    "t_ASADMIN_PWD": {
+        "title": "T_ASADMIN",
+        "type": "password"
+    },
+    "t_APEX_USER": {
+        "title": "T_APEX_USER",
+        "type": "password"
+    },
+    "t_APEX_EMAIL": {
+        "title": "T_APEX_EMAIL",
+        "type": "password"
+    
+    }
+}

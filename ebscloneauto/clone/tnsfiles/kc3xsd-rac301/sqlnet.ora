@@ -1,0 +1,22 @@
+#
+# $Header: sqlnet_ora_cdb_db19.tmp 120.0.12020000.4 2020/04/09 09:02:52 sbandla noship $
+#
+# +===========================================================================+
+# |  Copyright (c) 2017, 2020 Oracle Corporation, Redwood Shores, California, USA   |
+# |                        All rights reserved                                |
+# |                       Applications  Division                              |
+# +===========================================================================+
+#
+# $AutoConfig$
+#
+
+#################################
+# Definition for CDB sqlnet.ora
+#################################
+
+NAMES.DIRECTORY_PATH=(TNSNAMES, ONAMES, HOSTNAME)
+SQLNET.EXPIRE_TIME=10
+SQLNET.INBOUND_CONNECT_TIMEOUT=60
+SQLNET.ALLOWED_LOGON_VERSION_SERVER=11
+
+IFILE=/u01/app/oracle/product/19.0.0/ORBUPG/network/admin/ORBUPG_kc3xsd-rac301/sqlnet.ora

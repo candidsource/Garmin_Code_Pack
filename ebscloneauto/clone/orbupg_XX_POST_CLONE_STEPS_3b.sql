@@ -1,0 +1,74 @@
+/****************************************************************
+*PURPOSE : To recreate dba directories in CDB$ROOT container    *
+*AUTHOR  : Venkat Atluri                                        *
+*CREATED : 20-May-2024                                          *
+*LAST MODIFIED: 21-May-2024                                     *
+*Run in CDB as sysdba
+*****************************************************************/
+spool /mnt/nfs/oracle.patches/scripts/master_clone_files/logs/<CLONE_TO>_XX_POST_CLONE_STEPS_3b.log
+
+set serveroutput on escape on verify off;
+DECLARE
+  v_source_inst varchar2(10) := 'ORBIT';
+  v_target_inst varchar2(10);
+  sql_str       varchar2(1000);
+  v_total_val  number := 0;
+  null_check exception;
+  invalid_source_inst exception;
+  invalid_target_inst exception;
+  --select substr(name,1,length(name)-2) into v_target_inst from v$database ;
+
+  CURSOR list_dir IS
+  SELECT dd.directory_path, dd.directory_name
+  FROM sys.dba_directories dd
+  WHERE dd.directory_path LIKE '%' || UPPER(v_source_inst) || '%'
+  ORDER BY dd.directory_path;
+
+BEGIN
+
+   select substr(name,1,length(name)-2) into v_target_inst from v$database ;
+
+   if v_source_inst is null then
+      raise invalid_source_inst;
+   end if;
+
+   if v_target_inst is null then
+      raise null_check;
+   elsif (v_target_inst = 'ORBIT') or (v_target_inst='ASCP') then
+      raise invalid_target_inst;	
+   end if;
+
+   FOR cur_rec IN list_dir
+   LOOP
+       v_total_val := v_total_val + 1;
+
+       sql_str :=
+               'CREATE OR REPLACE DIRECTORY '
+               || cur_rec.directory_name
+               || '  as '
+               || ''''
+               || REPLACE (cur_rec.directory_path,
+                  UPPER (v_source_inst),
+                                v_target_inst)
+                    || '''';
+
+                EXECUTE IMMEDIATE sql_str;
+
+   END LOOP;
+  --dbms_output.put_line('The DB name is: '|| v_target_inst);
+   dbms_output.put_line('Total directories('||v_target_inst||') updated: '|| v_total_val);
+
+EXCEPTION
+  when null_check then
+    raise_application_error(-20100,'Target DB name is null');
+  when invalid_source_inst then
+    raise_application_error(-20101,'Souce DB name is null');	 
+  when invalid_target_inst then
+    raise_application_error(-20102,'You can not run this script in prod DB: '|| v_target_inst);	
+  when others then
+    dbms_output.put_line(sqlcode||'- '||sqlerrm);
+    raise;
+END;
+/
+spool off;
+

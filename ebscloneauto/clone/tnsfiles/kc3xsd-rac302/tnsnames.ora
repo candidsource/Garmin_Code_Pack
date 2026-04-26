@@ -1,0 +1,46 @@
+#
+# $Header: tnsnames_ora_cdb_db121.tmp 120.0.12020000.2 2019/05/10 09:09:22 lmanda noship $
+#
+# +===========================================================================+
+# |  Copyright (c) 2016, 2019 Oracle Corporation, Redwood Shores, California, USA   |
+# |                        All rights reserved                                |
+# |                       Applications  Division                              |
+# +===========================================================================+
+#
+# $AutoConfig$
+#
+
+###########################
+# Definition for database
+###########################
+
+ORBUPGCD =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL=tcp)(HOST=kc3xsd-rac302.garmin.com)(PORT=1531))
+    (CONNECT_DATA = (SERVICE_NAME=ORBUPGCD)(INSTANCE_NAME=ORBUPGCD2))
+  )
+
+kc3xsd-rac302:1531 =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL=tcp)(HOST=kc3xsd-rac302.garmin.com)(PORT=1531))
+  )
+
+ORBUPGCD_REMOTE =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL=tcp)(HOST=kc3xsd-rac302.garmin.com)(PORT=1531))
+  )
+
+##############
+# Intermedia
+##############
+
+extproc_connection_data =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS=(PROTOCOL=IPC)(KEY=EXTPROCORBUPGCD))
+    )
+    (CONNECT_DATA = (SID=PLSExtProc)(PRESENTATION = RO))
+  )
+
+
+IFILE=/u01/app/oracle/product/19.0.0/ORBUPG/network/admin/ORBUPG_kc3xsd-rac302/tnsnames.ora

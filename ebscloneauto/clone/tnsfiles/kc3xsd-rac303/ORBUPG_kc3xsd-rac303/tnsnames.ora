@@ -1,0 +1,50 @@
+#
+# $Header: ad8itns.ora 120.0.12020000.2 2014/04/11 17:03:33 srveerar ship $
+#
+# ###############################################################
+# 
+# Do not edit settings in this file manually. They are managed
+# automatically and will be overwritten when AutoConfig runs.
+# For more information about AutoConfig, refer to the Oracle
+# E-Business Suite Setup Guide.
+# 
+# ###############################################################
+
+#
+
+#
+# Net8 definition for the database
+#
+
+ORBUPG = (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=KC3XSD-RAC303)(PORT=1531))
+                (CONNECT_DATA= (SERVICE_NAME=ORBUPG)
+                         (INSTANCE_NAME=ORBUPGCD3))
+            )
+
+kc3xsd-rac303vip.garmin.com:1531 =
+            (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=KC3XSD-RAC303)(PORT=1531))
+            )
+
+kc3xsd-rac3scan.garmin.com:1522 =
+            (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=KC3XSD-RAC303)(PORT=1531))
+            ) 
+
+#
+# Intermedia
+#
+extproc_connection_data =
+          (DESCRIPTION=
+              (ADDRESS_LIST =
+                  (ADDRESS=(PROTOCOL=IPC)(KEY=EXTPROCORBUPG))
+              )
+              (CONNECT_DATA=
+                  (SID=PLSExtProc)
+                  (PRESENTATION = RO)
+              ) )
+
+IFILE=/u01/app/oracle/product/19.0.0/ORBUPG/network/admin/ORBUPG_kc3xsd-rac303/ORBUPG_kc3xsd-rac303_ifile.ora
+
+

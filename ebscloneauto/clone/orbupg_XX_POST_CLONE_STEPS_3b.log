@@ -1,0 +1,13 @@
+SQL> @orbupg_XX_POST_CLONE_STEPS_3b.sql
+Enter value for v_source_instance: ORBIT
+-1031- ORA-01031: insufficient privileges                                       
+DECLARE
+*
+ERROR at line 1:
+ORA-01031: insufficient privileges
+ORA-06512: at line 60
+ORA-06512: at line 45
+ORA-06512: at line 45 
+
+
+SQL> exit

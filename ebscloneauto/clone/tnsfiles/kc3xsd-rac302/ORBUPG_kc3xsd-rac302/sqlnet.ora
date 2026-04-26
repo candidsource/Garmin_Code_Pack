@@ -1,0 +1,18 @@
+###############################################################
+#
+# Do not edit settings in this file manually. They are managed
+# automatically and will be overwritten when AutoConfig runs.
+# For more information about AutoConfig, refer to the Oracle
+# E-Business Suite Setup Guide.
+#
+#$Header: NetServiceHandler.java 120.28.12020000.25 2024/01/17 12:14:45 lmanda ship $
+#
+###############################################################
+
+NAMES.DIRECTORY_PATH=(TNSNAMES, ONAMES, HOSTNAME)
+SQLNET.EXPIRE_TIME= 10
+SQLNET.INBOUND_CONNECT_TIMEOUT =200
+SQLNET.ALLOWED_LOGON_VERSION_SERVER=10
+
+
+IFILE=/u01/app/oracle/product/19.0.0/ORBUPG/network/admin/ORBUPG_kc3xsd-rac302/sqlnet_ifile.ora

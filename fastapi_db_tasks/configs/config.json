@@ -1,0 +1,401 @@
+{
+    "tasks": {
+        "full": {
+            "clone": {
+                "info": {
+                    "title": "Oracle EBS Automated Clone Dashboard",
+                    "TASK_TYPE": "DB CLONE TASKS"
+                },
+                "tasks_order": [
+                    "primary",
+                    "secondary",
+                    "third",
+                    "auto_config",
+                    "post_steps_apps",
+                    "post_steps_sys"
+                ],
+                "primary": {
+                    "title": "Primay DB Tier Clone",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "secondary": {
+                    "title": "Secondary DB Tier Clone",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "third": {
+                    "title": "Third DB Tier Clone",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "auto_config": {
+                    "title": "DB Tier Auto Config",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_steps_apps": {
+                    "title": "Post Clone Steps on DB [Apps]",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_steps_sys": {
+                    "title": "Post Clone Steps on DB [Sys]",
+                    "tasks_order": [],
+                    "subtasks": {}
+                }
+            },
+            "apps": {
+                "info": {
+                    "title": "",
+                    "TASK_TYPE": "APPS CLONE TASKS"
+                },
+                "tasks_order": [
+                    "file_system",
+                    "primary",
+                    "ha_steps",
+                    "secondary",
+                    "change_pass",
+		    "post_clone_a",
+		    "post_clone_b",
+		    "post_clone_c",
+                    "orb_run_master_postclone_steps",
+                    "Non_EBS_Password_Changes"
+                ],
+                "file_system": {
+                    "title": "Create File System",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "primary": {
+                    "title": "Clone Primary Apps Tier",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "ha_steps": {
+                    "title": "HA Steps",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "secondary": {
+                    "title": "Clone Secondary Apps Tier",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "change_pass": {
+                    "title": "Password Change Steps",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "auto_config": {
+                    "title": "Apps Tier Auto Config",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+		"post_clone_a": {
+                    "title": "Post Clone Steps A",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_clone_b": {
+                    "title": "Post Clone Steps B",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_clone_c": {
+                    "title": "Post Clone Steps C",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_1": {
+                    "title": "xx post clone steps 1",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_2": {
+                    "title": "xx post clone steps 2",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_3a": {
+                    "title": "xx post clone steps 3a",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "step217": {
+                    "title": "step217",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_3b": {
+                    "title": "xx post clone steps 3b",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_4": {
+                    "title": "xx post clone steps 4",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_4c": {
+                    "title": "xx post clone steps 4c",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_res_conf_files_on_app_tier": {
+                    "title": "xx restore conf files on app tier",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "ACL_changes": {
+                    "title": "ACL Changes",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "orb_run_master_postclone_steps": {
+                    "title": "orb run master post clone steps",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "wallet_creation_for_payment_module": {
+                    "title": "wallet cration for payment module",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "Non_EBS_Password_Changes": {
+                    "title": "Non EBS Password Changes",
+                    "tasks_order": [],
+                    "subtasks": {}
+                }
+            },
+            "final": {
+                "tasks_order": [
+                    "clone_auto_config_final",
+                    "apps_auto_config_final"
+                ],
+                "info": {
+                    "TASK_TYPE": "Final Set of Tasks"
+                },
+                "clone_auto_config_final": {
+                    "title": "DB Tier Auto Config",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "apps_auto_config_final": {
+                    "title": "Apps Tier Auto Config",
+                    "tasks_order": [],
+                    "subtasks": {}
+                }
+            }
+        },
+        "fast": {
+            "clone": {
+                "info": {
+                    "title": "Oracle EBS Automated Fast Clone Dashboard",
+                    "TASK_TYPE": "DB FAST CLONE TASKS"
+                },
+                "tasks_order": [
+                    "primary",
+                    "secondary",
+                    "auto_config",
+                    "post_steps"
+                ],
+                "primary": {
+                    "title": "Primay DB Tier Clone",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "secondary": {
+                    "title": "Secondary DB Tier Clone",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "auto_config": {
+                    "title": "DB Tier Auto Config",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_steps": {
+                    "title": "Post Clone Steps on DB Nodes",
+                    "tasks_order": [],
+                    "subtasks": {}
+                }
+            },
+            "apps": {
+                "info": {
+                    "title": "",
+                    "TASK_TYPE": "APPS CLONE TASKS"
+                },
+                "tasks_order": [
+                    "file_system",
+                    "primary",
+                    "ha_steps",
+                    "secondary",
+                    "change_pass",
+                    "post_clone",
+                    "orb_run_master_postclone_steps",
+                    "wallet_creation_for_payment_module",
+                    "Non_EBS_Password_Changes"
+                ],
+                "file_system": {
+                    "title": "Create File System",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "primary": {
+                    "title": "Clone Primary Apps Tier",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "ha_steps": {
+                    "title": "HA Steps",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "secondary": {
+                    "title": "Clone Secondary Apps Tier",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "change_pass": {
+                    "title": "Password Change Steps",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "auto_config": {
+                    "title": "Apps Tier Auto Config",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_clone": {
+                    "title": "Post Clone Steps",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_1": {
+                    "title": "xx post clone steps 1",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_2": {
+                    "title": "xx post clone steps 2",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_3a": {
+                    "title": "xx post clone steps 3a",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "step217": {
+                    "title": "step217",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_3b": {
+                    "title": "xx post clone steps 3b",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_4": {
+                    "title": "xx post clone steps 4",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_post_clone_steps_4c": {
+                    "title": "xx post clone steps 4c",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "xx_res_conf_files_on_app_tier": {
+                    "title": "xx restore conf files on app tier",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "ACL_changes": {
+                    "title": "ACL Changes",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "orb_run_master_postclone_steps": {
+                    "title": "orb run master post clone steps",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "wallet_creation_for_payment_module": {
+                    "title": "wallet cration for payment module",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "Non_EBS_Password_Changes": {
+                    "title": "Non EBS Password Changes",
+                    "tasks_order": [],
+                    "subtasks": {}
+                }
+            },
+            "final": {
+                "info": {
+                    "TASK_TYPE": "Final Set of Tasks"
+                },
+                "tasks_order": [
+                    "clone_auto_config_final",
+                    "apps_auto_config_final"
+                ],
+                "clone_auto_config_final": {
+                    "title": "DB Tier Auto Config",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "apps_auto_config_final": {
+                    "title": "Apps Tier Auto Config",
+                    "tasks_order": [],
+                    "subtasks": {}
+                }
+            }
+        },
+        "patch": {
+            "adop": {
+                "info": {
+                    "title": "Oracle ADOP Patching Dashboard"
+                },
+                "tasks_order": [
+                    "fs_clone",
+                    "prepare",
+                    "apply",
+                    "cutover",
+                    "finalize"
+                ],
+                "fs_clone": {
+                    "title": "FSClone",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "prepare": {
+                    "title": "Prepare",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "apply": {
+                    "title": "Apply",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "cutover": {
+                    "title": "Cutover",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "finalize": {
+                    "title": "Finalize",
+                    "tasks_order": [],
+                    "subtasks": {}
+                }
+            }
+        }
+    },
+    "envs": {
+        "orbupg": "ORBUPG",
+        "orbprj": "PLNPRJ",
+        "qa": "QA"
+    }
+}

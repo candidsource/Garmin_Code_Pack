@@ -1,0 +1,71 @@
+###############################################################
+#
+# Do not edit settings in this file manually. They are managed
+# automatically and will be overwritten when AutoConfig runs.
+# For more information about AutoConfig, refer to the Oracle
+# E-Business Suite Setup Guide.
+#
+#$Header: NetServiceHandler.java 120.28.12020000.23 2022/02/17 14:09:20 kmandal ship $
+#
+###############################################################
+
+ORBUPG=
+        (DESCRIPTION= 
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301vip.garmin.com)(PORT=1531))
+            (CONNECT_DATA=
+                (SERVICE_NAME=ebs_ORBUPG)
+                (INSTANCE_NAME=ORBUPGCD1)
+            )
+        )
+
+ORBUPG_FO=
+        (DESCRIPTION= 
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301vip.garmin.com)(PORT=1531))
+            (CONNECT_DATA=
+                (SERVICE_NAME=ebs_ORBUPG)
+                (INSTANCE_NAME=ORBUPGCD1)
+            )
+        )
+
+ORBUPGCD1_LOCAL=
+        (DESCRIPTION= 
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301vip.garmin.com)(PORT=1531))
+        )
+
+ORBUPG_BALANCE=
+        (DESCRIPTION= 
+            (ADDRESS_LIST=
+                (LOAD_BALANCE=YES)
+                (FAILOVER=YES)
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301vip.garmin.com)(PORT=1531))
+            )
+            (CONNECT_DATA=
+                (SERVICE_NAME=ebs_ORBUPG)
+            )
+        )
+
+ORBUPG_REMOTE=
+        (DESCRIPTION= 
+            (ADDRESS_LIST=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301vip.garmin.com)(PORT=1531))
+            )
+        )
+
+kc3xsd-rac3scan.garmin.com:1522=
+        (DESCRIPTION= 
+            (ADDRESS_LIST=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301vip.garmin.com)(PORT=1531))
+            )
+        )
+
+extproc_connection_data = 
+    (DESCRIPTION= 
+         (ADDRESS_LIST = 
+             (ADDRESS=(PROTOCOL=IPC)(KEY=EXTPROCORBUPG))
+        )
+        (CONNECT_DATA=
+            (SID=PLSExtProc)
+            (PRESENTATION = RO)
+        ) )
+
+IFILE=/u01/app/oracle/product/19.0.0/ORBUPG/network/admin/ORBUPG_kc3xsd-rac301/ORBUPG_kc3xsd-rac301_ifile.ora

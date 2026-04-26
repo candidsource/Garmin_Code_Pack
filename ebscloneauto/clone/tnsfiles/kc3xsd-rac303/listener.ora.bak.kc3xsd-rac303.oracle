@@ -1,0 +1,36 @@
+#
+# $Header: listener_ora_cdb_db19_rac.tmp 120.0.12020000.1 2019/03/25 07:46:16 lmanda noship $
+#
+# +===========================================================================+
+# |  Copyright (c) 2016, 2019 Oracle Corporation, Redwood Shores, California, USA   |
+# |                        All rights reserved                                |
+# |                       Applications  Division                              |
+# +===========================================================================+
+#
+# $AutoConfig$
+#
+
+####################################
+# Definition for database listener
+####################################
+
+ORBUPGCD =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+      (ADDRESS_LIST =
+        (ADDRESS = (PROTOCOL = TCP)(HOST = kc3xsd-rac303vip.garmin.com)(PORT = 1531)))
+      (ADDRESS_LIST =
+        (ADDRESS = (PROTOCOL = TCP)(HOST = kc3xsd-rac303.garmin.com)(PORT = 1531)(IP = FIRST)))
+    )
+  )
+
+USE_SID_AS_SERVICE_ORBUPGCD            = ON
+STARTUP_WAIT_TIME_ORBUPGCD             = 0
+CONNECT_TIMEOUT_ORBUPGCD               = 10
+TRACE_LEVEL_ORBUPGCD                   = OFF
+LOG_DIRECTORY_ORBUPGCD                 = /u01/app/oracle/product/19.0.0/ORBUPG/network/admin
+LOG_FILE_ORBUPGCD                      = ORBUPGCD
+TRACE_DIRECTORY_ORBUPGCD               = /u01/app/oracle/product/19.0.0/ORBUPG/network/admin
+TRACE_FILE_ORBUPGCD                    = ORBUPGCD
+ADMIN_RESTRICTIONS_ORBUPGCD            = ON
+SUBSCRIBE_FOR_NODE_DOWN_EVENT_ORBUPGCD = OFF

@@ -1,0 +1,146 @@
+ORBUPG_DR = (DESCRIPTION=
+               (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301-dr-vip.garmin.com)(PORT=1531))
+               (CONNECT_DATA=(SID=ORBUPG1))
+               (UR=A)
+            )
+
+ORBPRJ_DR = (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301-dr-vip.garmin.com)(PORT=1572))
+                (CONNECT_DATA=(SID=ORBPRJ1))
+                (UR=A)
+            )
+
+
+ORBUPG_BACKUP = (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac301vip.garmin.com)(PORT=1531))
+                (CONNECT_DATA=(SID=ORBUPG1))
+                (UR=A)
+            )
+
+RMNPRD =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = rmnprd.garmin.com)(PORT = 1560))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = RMNPRD)
+    )
+  )
+
+
+RMNTST=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=rmntst.garmin.com)(PORT=1560))
+            (CONNECT_DATA=
+                (SERVICE_NAME=RMNTST)
+            )
+        )
+
+ORB1223_DR_VIP = (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=olaxsd-rac202-dr-vip.garmin.com)(PORT=1534))
+                (CONNECT_DATA=(SID=ORB12232))
+                (UR=A)
+            )
+
+ORBUTOP_DR_VIP = (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=olaxsd-rac202-dr-vip.garmin.com)(PORT=1536))
+                (CONNECT_DATA=(SID=ORBUTOP2))
+                (UR=A)
+            )
+
+#ORBUTOP = (DESCRIPTION=
+               ## (ADDRESS=(PROTOCOL=tcp)(HOST=olaxsd-rac202vip)(PORT=1536))
+                #(ADDRESS=(PROTOCOL=tcp)(HOST=olaxsd-rac202)(PORT=1536))
+                #(CONNECT_DATA= (SERVICE_NAME=ORBUTOP2)
+                         #(INSTANCE_NAME=ORBUTOP2))
+            #)
+
+ORBUTOP2 = (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=olaxsd-rac202vip)(PORT=1536))
+                (ADDRESS=(PROTOCOL=tcp)(HOST=olaxsd-rac202)(PORT=1536))
+                (CONNECT_DATA= (SERVICE_NAME=ORBUTOP2)
+                         (INSTANCE_NAME=ORBUTOP2))
+            )
+
+PLNUTOP=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=10.56.16.7)(PORT=1522))
+                (ADDRESS=(PROTOCOL=tcp)(HOST=10.56.16.6)(PORT=1522))
+                (ADDRESS=(PROTOCOL=tcp)(HOST=10.56.16.8)(PORT=1522))
+            (CONNECT_DATA=
+                (SERVICE_NAME=PLNUTOP)
+                (INSTANCE_NAME=PLNUTOP2)
+            )
+        )
+
+ORBUTOP_BACKUP = (DESCRIPTION=
+               # (ADDRESS=(PROTOCOL=tcp)(HOST=olaxsd-rac202-dr-vip.garmin.com)(PORT=1536))
+                (ADDRESS=(PROTOCOL=tcp)(HOST=olaxsd-rac202)(PORT=1536))
+		(CONNECT_DATA=(SID=ORBUTOP2))
+                (UR=A)
+            )
+RMNTST=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=rmntst.garmin.com)(PORT=1560))
+            (CONNECT_DATA=
+                (SERVICE_NAME=RMNTST)
+            )
+        )
+
+
+# Mark Rogers added below on 3/12/2023:
+
+ORN_ORBTST =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = linxdd-twany00.garmin.com)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SID = ORN_ORBTST)
+      (SERVER = DEDICATED)
+    )
+  )
+
+
+CLNE_ORBDEV=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = linxtd-orbdev01.garmin.com)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SID = MISTWRC1)
+      (SERVER = DEDICATED)
+    )
+  )
+
+
+AGDEV =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = cv1xdd-agl01)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = AGDEV)
+    )
+  )
+
+
+PLNUTOP=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=10.56.16.7)(PORT=1522))
+                (ADDRESS=(PROTOCOL=tcp)(HOST=10.56.16.6)(PORT=1522))
+                (ADDRESS=(PROTOCOL=tcp)(HOST=10.56.16.8)(PORT=1522))
+            (CONNECT_DATA=
+                (SERVICE_NAME=PLNUTOP)
+                (INSTANCE_NAME=PLNUTOPC1)
+            )
+        )
+
+
+ORBUPG=
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=kc3xsd-rac302vip.garmin.com)(PORT=1531))
+            (CONNECT_DATA=
+                (SERVICE_NAME=ORBUPG)
+                (INSTANCE_NAME=ORBUPGCD2)
+            )
+        )

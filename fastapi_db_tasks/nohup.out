@@ -1,0 +1,2699 @@
+INFO:     Uvicorn running on https://0.0.0.0:8443 (Press CTRL+C to quit)
+INFO:     Started parent process [787890]
+INFO:     Started server process [787894]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [787892]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [787893]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [787895]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     172.16.0.80:55216 - "GET / HTTP/1.1" 200 OK
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     172.16.0.80:53406 - "GET /js/prechecks.js HTTP/1.1" 404 Not Found
+INFO:     172.16.0.80:55216 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53406 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55216 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:55216 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55216 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55216 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53406 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: aditya@candidsource.com
+INFO:     127.0.0.1:26226 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:53406 - "POST /login HTTP/1.1" 200 OK
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     172.16.0.80:57281 - "GET / HTTP/1.1" 200 OK
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     172.16.0.80:65227 - "GET /js/prechecks.js HTTP/1.1" 404 Not Found
+INFO:     172.16.0.80:57281 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65227 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63593 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59594 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57281 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63593 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61604 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61604 - "GET /js/prechecks.js HTTP/1.1" 404 Not Found
+INFO:     172.16.0.80:61604 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61604 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54434 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61604 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60649 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64798 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64977 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59301 - "GET /js/prechecks.js HTTP/1.1" 404 Not Found
+INFO:     172.16.0.80:59301 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64977 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64977 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64977 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64977 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62930 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     Received SIGINT, exiting.
+INFO:     Terminated child process [787892]
+INFO:     Terminated child process [787893]
+INFO:     Terminated child process [787894]
+INFO:     Terminated child process [787895]
+INFO:     Waiting for child process [787892]
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [787892]
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     Waiting for child process [787893]
+INFO:     Waiting for application shutdown.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [787894]
+INFO:     Finished server process [787895]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [787893]
+INFO:     Waiting for child process [787894]
+INFO:     Waiting for child process [787895]
+INFO:     Stopping parent process [787890]
+INFO:     Uvicorn running on https://0.0.0.0:8443 (Press CTRL+C to quit)
+INFO:     Started parent process [788450]
+INFO:     Started server process [788453]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [788455]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [788452]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [788454]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /configs/prechecks
+    POST -> /configs/prechecks
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     172.16.0.80:62065 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62065 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62065 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62065 - "GET /tasks/list HTTP/1.1" 200 OK
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /configs/prechecks
+    POST -> /configs/prechecks
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     172.16.0.80:63573 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62065 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /configs/prechecks
+    POST -> /configs/prechecks
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     172.16.0.80:57396 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60236 - "GET /configs/prechecks HTTP/1.1" 200 OK
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /configs/prechecks
+    POST -> /configs/prechecks
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     172.16.0.80:53498 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51672 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63573 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63460 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49255 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49255 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49255 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59464 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51332 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51332 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51332 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51332 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58018 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51332 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60161 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:53216 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57387 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60161 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60161 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59464 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59464 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /js/prechecks.js HTTP/1.1" 304 Not Modified
+INFO:     172.16.0.80:50543 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57573 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49666 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57573 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63437 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:63437 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:50543 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63437 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:63437 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:50543 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63437 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:56357 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56357 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56357 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:56357 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56357 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56357 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56357 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56357 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51601 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61824 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56357 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50543 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:51601 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56357 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51601 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60011 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:60011 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:60011 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:60936 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:26986 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:60551 - "POST /login HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60551 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60551 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60551 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60551 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60951 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60951 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65102 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65102 - "GET /js/prechecks.js HTTP/1.1" 304 Not Modified
+INFO:     172.16.0.80:65102 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:65102 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65102 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50483 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52876 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:53155 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50483 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53155 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53155 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65102 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50483 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52876 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53155 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:50483 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:53155 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65102 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53155 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58919 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58919 - "GET /js/prechecks.js HTTP/1.1" 304 Not Modified
+INFO:     172.16.0.80:58919 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:58919 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58919 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62967 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:53553 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61734 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62967 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58919 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60189 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:62546 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:62546 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62546 - "GET /js/prechecks.js HTTP/1.1" 304 Not Modified
+INFO:     172.16.0.80:62546 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:62546 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62546 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62546 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55039 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55039 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55039 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:15854 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:58627 - "POST /login HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58627 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58627 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58627 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58627 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56305 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59839 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59839 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59839 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59839 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59839 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59839 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59839 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63111 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63111 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63111 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63111 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:63111 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63111 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63111 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:53858 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59860 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53375 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:63111 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53858 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:28762 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:61895 - "POST /login HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62439 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62439 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62439 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62439 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62439 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:63719 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55717 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62439 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62439 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61964 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61964 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61964 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61964 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56872 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60850 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:59612 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60850 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60850 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61366 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61366 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61366 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61366 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58580 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:53414 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:52795 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53414 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52795 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57623 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57623 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57623 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57623 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61520 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51815 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:64408 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51815 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51815 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64629 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64629 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:64629 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64629 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64629 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:63153 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63153 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55799 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63153 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:24114 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:63945 - "POST /login HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63945 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63945 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63945 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63945 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55059 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64132 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:59079 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64132 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59079 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSTST/log/TASK_STATUS/tst_TASK_STATUS_2025_07_02_13-47-54.log
+ERROR:main:An unexpected error occurred: list index out of range
+Traceback (most recent call last):
+  File "/stage1/fastapi_db_tasks/main.py", line 517, in get_status
+    task_status_resp = get_task_status(env)
+  File "/stage1/fastapi_db_tasks/main.py", line 500, in get_task_status
+    task_segment = line[3]
+                   ~~~~^^^
+IndexError: list index out of range
+INFO:     172.16.0.80:61920 - "GET /status?env=tst HTTP/1.1" 500 Internal Server Error
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61920 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63826 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63826 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63826 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63826 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56490 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56180 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63826 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:50660 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51700 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61494 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51700 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61494 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56180 - "POST /configs/prechecks HTTP/1.1" 401 Unauthorized
+INFO:main:Received login attempt for user: aditya@candidsource.com
+INFO:     127.0.0.1:17176 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:64325 - "POST /login HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64325 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57645 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57645 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64325 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64325 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64325 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64325 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59624 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57131 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59383 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56501 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:57645 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54355 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54355 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50402 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50402 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50402 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50402 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64388 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64388 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64388 - "POST /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64388 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61047 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61047 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61047 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58584 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:52640 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58584 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52640 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:61047 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:58584 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52640 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58584 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: aditya@candidsource.com
+INFO:     127.0.0.1:25548 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:53040 - "POST /login HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61050 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63785 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63785 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63785 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63785 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65106 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63785 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59168 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59533 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62569 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49228 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:59168 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:65106 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60021 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60021 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60021 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60021 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52665 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60021 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65204 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62107 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58915 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53277 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58915 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:53277 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50116 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50116 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50116 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50116 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61778 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50116 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:52886 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61778 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:61749 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:50116 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61778 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:30264 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:58768 - "POST /login HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58768 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58768 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58768 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58768 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61130 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52529 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55767 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61130 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55767 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49845 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49845 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49845 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49845 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:49845 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49845 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49845 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56589 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:59566 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:54450 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57265 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54450 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56086 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56086 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:56086 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56086 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55168 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56086 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55168 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56086 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55168 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64527 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64527 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:59165 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64527 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59165 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64527 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:64527 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54327 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64527 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59769 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59769 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:59769 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59769 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59769 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53936 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:59769 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:52464 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59102 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56477 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56477 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56477 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56477 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54774 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56477 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55058 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:52707 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62415 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:65163 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:54774 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55058 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: aditya@candidsource.com
+INFO:     127.0.0.1:59346 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:57677 - "POST /login HTTP/1.1" 200 OK
+INFO:main:script path: /stage1/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /stage1/fastapi_db_tasks/scripts/clone.sh qa fast-clone status
+INFO:main:script running status stdout: THIS_DIR: /stage1/fastapi_db_tasks/scripts
+ENV: qa
+task_type: fast
+task_segment: clone
+task: auto_config
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_fast.sh qa" | grep -v 'grep'
+auto_config: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:fast:auto_config
+THIS_DIR: /stage1/fastapi_db_tasks/scripts
+ENV: qa
+task_type: fast
+task_segment: clone
+task: auto_config
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_fast.sh qa" | grep -v 'grep'
+db_clone_script file exists
+params: qa fast clone auto_config 
+job submitted in background, check server log for more info: /stage1/ebscloneauto/CSQA/log/server/server.log
+INFO:     172.16.0.80:55400 - "GET /run?env=qa&task_type=fast&task_segment=clone&task=auto_config HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55400 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57945 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57945 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:57945 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57945 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49197 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:57779 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57945 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49197 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57945 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:59636 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:52685 - "POST /login HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52685 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52685 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52685 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52685 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50210 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53314 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:56741 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50210 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56741 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52385 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52385 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52385 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52385 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58868 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57916 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:57034 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57916 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57034 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:65056 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:49905 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62371 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62371 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62371 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62371 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58002 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49364 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61902 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49364 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49364 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62873 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62873 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62873 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62873 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62873 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59150 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:59150 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62873 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59150 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:51324 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51444 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57224 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51444 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57224 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51444 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57224 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:57224 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51444 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:57224 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:51324 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:54440 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54051 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54051 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54051 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54736 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54051 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54051 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54051 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54051 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52448 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     172.16.0.80:54736 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:62852 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:54051 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:54440 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:54440 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:63843 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:script path: /stage1/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /stage1/fastapi_db_tasks/scripts/clone.sh qa full-final status
+INFO:main:script running status stdout: THIS_DIR: /stage1/fastapi_db_tasks/scripts
+ENV: qa
+task_type: full
+task_segment: final
+task: apps_auto_config_final
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_aditya.sh qa" | grep -v 'grep'
+apps_auto_config_final: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:apps_auto_config_final
+THIS_DIR: /stage1/fastapi_db_tasks/scripts
+ENV: qa
+task_type: full
+task_segment: final
+task: apps_auto_config_final
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_aditya.sh qa" | grep -v 'grep'
+db_clone_script file exists
+params: qa full final apps_auto_config_final 
+job submitted in background, check server log for more info: /stage1/ebscloneauto/CSQA/log/server/server.log
+INFO:     172.16.0.80:55192 - "GET /run?env=qa&task_type=full&task_segment=final&task=apps_auto_config_final HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55192 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:63843 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55192 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55192 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55192 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55192 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55920 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59298 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:63957 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55920 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63957 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:64206 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:64206 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:64206 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63354 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63354 - "GET /js/prechecks.js HTTP/1.1" 304 Not Modified
+INFO:     172.16.0.80:63354 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63354 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63354 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61169 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53818 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:62132 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61169 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:63354 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52134 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52134 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52134 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:52134 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62885 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62609 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:58397 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:62885 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:58397 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55010 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:58933 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:64424 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55965 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:57115 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50910 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50910 - "GET /js/prechecks.js HTTP/1.1" 304 Not Modified
+INFO:     172.16.0.80:50910 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50910 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50910 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49670 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64374 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61651 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49670 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50910 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50910 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61651 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49670 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:64374 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50910 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50910 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:49670 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:61651 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:49670 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:58197 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:56662 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51036 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51036 - "GET /js/prechecks.js HTTP/1.1" 304 Not Modified
+INFO:     172.16.0.80:51036 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:51036 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51036 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:51036 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55422 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61761 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55984 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:55984 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59887 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59887 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     172.16.0.80:59887 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59887 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59887 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59887 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61537 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53181 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:53181 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59887 - "GET /run?env=qa&task_type=full&task_segment=clone&task=post_steps HTTP/1.1" 401 Unauthorized
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:9442 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     172.16.0.80:54069 - "POST /login HTTP/1.1" 200 OK
+INFO:main:script path: /stage1/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /stage1/fastapi_db_tasks/scripts/clone.sh qa fast-final status
+INFO:main:script running status stdout: THIS_DIR: /stage1/fastapi_db_tasks/scripts
+ENV: qa
+task_type: fast
+task_segment: final
+task: apps_auto_config_final
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_fast.sh qa" | grep -v 'grep'
+apps_auto_config_final: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:fast:apps_auto_config_final
+THIS_DIR: /stage1/fastapi_db_tasks/scripts
+ENV: qa
+task_type: fast
+task_segment: final
+task: apps_auto_config_final
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_fast.sh qa" | grep -v 'grep'
+db_clone_script file exists
+params: qa fast final apps_auto_config_final 
+job submitted in background, check server log for more info: /stage1/ebscloneauto/CSQA/log/server/server.log
+INFO:     172.16.0.80:50133 - "GET /run?env=qa&task_type=fast&task_segment=final&task=apps_auto_config_final HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:50133 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:53805 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50133 - "GET / HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50133 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50133 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     172.16.0.80:50133 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60523 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     172.16.0.80:56345 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:59421 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     172.16.0.80:60523 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     172.16.0.80:59421 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:55547 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61047 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:58173 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:61752 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:58610 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:54598 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:56120 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:57455 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:59810 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /stage1/ebscloneauto/CSQA/log/TASK_STATUS/qa_TASK_STATUS.log
+INFO:     172.16.0.80:51088 - "GET /status?env=qa HTTP/1.1" 200 OK
+INFO:     Uvicorn running on https://0.0.0.0:8443 (Press CTRL+C to quit)
+INFO:     Started parent process [53228]
+INFO:     Started server process [53232]
+INFO:     Waiting for application startup.
+INFO:     Started server process [53231]
+INFO:     Waiting for application startup.
+INFO:     Started server process [53230]
+INFO:     Application startup complete.
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Started server process [53233]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /configs/prechecks
+    POST -> /configs/prechecks
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     10.56.142.12:57746 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.12:57746 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.12:57746 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:57746 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.12:57746 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:57746 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:57746 - "GET /images/client.png HTTP/1.1" 200 OK
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /configs/prechecks
+    POST -> /configs/prechecks
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     10.56.142.12:58605 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.12:57746 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:58605 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:56812 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /configs/prechecks
+    POST -> /configs/prechecks
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     10.56.142.12:51284 - "POST /login HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.128:54354 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:63115 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63115 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53399 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 401 Unauthorized
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:55608 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.12:53399 - "POST /login HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53399 - "GET / HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     10.56.142.12:53399 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53399 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53399 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53399 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+    GET -> /
+    GET -> /users.html
+    GET -> /images/{image}
+    GET -> /tasks/list
+    GET -> /configs/tasks
+    GET -> /configs/dbconfig
+    GET -> /configs/prechecks
+    POST -> /configs/prechecks
+    GET -> /logs
+    POST -> /configs/dbconfig
+    GET -> /tasks/{task}
+    GET -> /resume
+    POST -> /run/{task_type}
+    GET -> /run
+    GET -> /status
+    GET -> /users/all
+    GET -> /users/me
+    POST -> /login
+    POST -> /reset-pass
+    POST -> /logout
+    POST -> /trigger-forgot-password-for-user
+    POST -> /jwt/login
+    POST -> /jwt/logout
+    POST -> /register
+    POST -> /forgot-password
+    POST -> /reset-password
+    POST -> /request-verify-token
+    POST -> /verify
+    GET -> /users/me
+    PATCH -> /users/me
+    GET -> /users/{id}
+    PATCH -> /users/{id}
+    DELETE -> /users/{id}
+    GET -> authenticated-route
+    GET -> /protected-route
+INFO:     10.56.142.12:64681 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:64681 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53399 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:53399 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     10.56.142.12:65205 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65205 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.12:59824 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:65205 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:54941 - "GET / HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     10.56.142.12:54941 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     10.56.142.12:54941 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:54941 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59606 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.12:54941 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:54941 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59606 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:54941 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:49465 - "GET / HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     10.56.142.12:49465 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     10.56.142.12:49465 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:49465 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51105 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51105 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.12:61292 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:61292 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:51105 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: aditya@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:35434 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.128:64485 - "POST /login HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:59368 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:59368 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.12:58605 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58605 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51957 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51957 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51957 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:51957 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:51978 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.12:55410 - "POST /login HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_b
+INFO:main:env: orbupg, task: post_clone_b, file_name: , lines: 
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:51779 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_b&env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_b
+INFO:main:env: orbupg, task: post_clone_b, file_name: orbupg_2026_04_23_11-25-49_post_clone_b.log, lines: 1
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:51779 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_b&env=orbupg&file_name=orbupg_2026_04_23_11-25-49_post_clone_b.log&lines=1 HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:59876 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:59876 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59876 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59876 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     10.56.142.12:59876 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59876 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59876 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59876 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59876 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59876 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:59876 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53547 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.12:53547 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:59876 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_b
+INFO:main:env: orbupg, task: post_clone_b, file_name: , lines: 
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:59876 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_b&env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_b
+INFO:main:env: orbupg, task: post_clone_b, file_name: orbupg_2026_04_23_12-17-53_post_clone_b.log, lines: 1
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:59876 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_b&env=orbupg&file_name=orbupg_2026_04_23_12-17-53_post_clone_b.log&lines=1 HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:62010 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:62010 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52067 - "GET / HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     10.56.142.12:52067 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52067 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52067 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58157 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52067 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58157 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52067 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:58157 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_b
+INFO:main:env: orbupg, task: post_clone_b, file_name: , lines: 
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:58157 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_b&env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_b
+INFO:main:env: orbupg, task: post_clone_b, file_name: orbupg_2026_04_23_12-25-04_post_clone_b.log, lines: 1
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:58157 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_b&env=orbupg&file_name=orbupg_2026_04_23_12-25-04_post_clone_b.log&lines=1 HTTP/1.1" 200 OK
+INFO:     10.56.142.12:49895 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 401 Unauthorized
+INFO:main:Received login attempt for user: laks@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:50274 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.12:59739 - "POST /login HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:49927 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:49927 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.128:59068 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.128:63424 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.128:59068 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:63424 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: aditya@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:58494 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.128:59712 - "POST /login HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:57119 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:57119 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:54635 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:54635 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:54765 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:54765 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:53034 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:53034 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:61322 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:61322 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:51037 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:51037 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.12:52224 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:52224 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52224 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:57270 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.12:51257 - "POST /login HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51257 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51257 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51257 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51257 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51257 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51257 - "GET /images/client.png HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     10.56.142.12:61863 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     10.56.142.12:61863 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:57891 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51257 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:61863 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:57891 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:56191 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:56191 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.128:54356 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 401 Unauthorized
+INFO:main:Received login attempt for user: aditya@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:49254 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.128:54356 - "POST /login HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:54356 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:54356 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:58919 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:58919 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:53372 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:53372 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58398 - "GET / HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     10.56.142.12:58398 - "GET /users/me HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58398 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58398 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58398 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.12:56785 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:58398 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:56785 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:56785 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_b
+INFO:main:env: orbupg, task: post_clone_b, file_name: , lines: 
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:58885 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_b&env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_b
+INFO:main:env: orbupg, task: post_clone_b, file_name: orbupg_2026_04_23_12-50-01_post_clone_b.log, lines: 1
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:58885 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_b&env=orbupg&file_name=orbupg_2026_04_23_12-50-01_post_clone_b.log&lines=1 HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:62169 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:62169 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.128:58750 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 401 Unauthorized
+INFO:main:Received login attempt for user: aditya@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:53276 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.128:58750 - "POST /login HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:58750 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:58750 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:61571 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:61571 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_b: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_b
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_b
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_b 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.128:56279 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_b HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:56279 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.16:49923 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.16:49923 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.16:49923 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.16:49923 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.16:49923 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.16:49923 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.16:49923 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.16:53010 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     10.56.142.16:49923 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.16:53010 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.16:49923 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.16:53010 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:60646 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.16:64954 - "POST /login HTTP/1.1" 200 OK
+INFO:     10.56.142.16:56557 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.16:56557 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.16:56557 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.16:56557 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.16:56557 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.16:56557 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.16:58089 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.16:56557 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.16:58089 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:Received login attempt for user: laks@candidsource.com
+INFO:     127.0.0.1:60576 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.16:51093 - "POST /login HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_a
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_a: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_a
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_a
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_a 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.16:55950 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_a HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.16:55950 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.12:65401 - "GET /status?env=orbprj HTTP/1.1" 500 Internal Server Error
+INFO:     10.56.142.12:53194 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53194 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53194 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53194 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53194 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65360 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.12:53194 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:65360 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53194 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53194 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:53194 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.12:53194 - "GET /status?env=orbprj HTTP/1.1" 500 Internal Server Error
+INFO:     10.56.142.12:51100 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51100 - "GET /js/prechecks.js HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51100 - "GET /images/candid.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51100 - "GET /images/client.png HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51100 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.12:51100 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51100 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51100 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51100 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.12:51100 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:     10.56.142.12:51100 - "GET /status?env=orbprj HTTP/1.1" 500 Internal Server Error
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:49654 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_a
+INFO:main:env: orbupg, task: post_clone_a, file_name: , lines: 
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:61763 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_a&env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: post_clone_a
+INFO:main:env: orbupg, task: post_clone_a, file_name: orbupg_2026_04_23_14-08-51_post_clone_a.log, lines: 1
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:61763 - "GET /logs?task_type=full&task_segment=apps&task=post_clone_a&env=orbupg&file_name=orbupg_2026_04_23_14-08-51_post_clone_a.log&lines=1 HTTP/1.1" 200 OK
+INFO:     10.56.142.12:54450 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_a HTTP/1.1" 401 Unauthorized
+INFO:main:Received login attempt for user: laks@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:53332 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.12:52071 - "POST /login HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_a
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_a: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_a
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_a
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_a 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:59693 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_a HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:59693 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-apps status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_c
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+post_clone_c: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:post_clone_c
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: apps
+task: post_clone_c
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full apps post_clone_c 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:54485 - "GET /run?env=orbupg&task_type=full&task_segment=apps&task=post_clone_c HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:54485 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-final status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: final
+task: clone_auto_config_final
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+clone_auto_config_final: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:clone_auto_config_final
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: final
+task: clone_auto_config_final
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full final clone_auto_config_final 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:51392 - "GET /run?env=orbupg&task_type=full&task_segment=final&task=clone_auto_config_final HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:51392 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:     10.56.142.128:52270 - "GET / HTTP/1.1" 200 OK
+INFO:     10.56.142.128:52270 - "GET /users/me HTTP/1.1" 401 Unauthorized
+INFO:     10.56.142.128:52270 - "GET /configs/dbconfig HTTP/1.1" 200 OK
+INFO:     10.56.142.128:49994 - "GET /images/favicon.ico HTTP/1.1" 200 OK
+INFO:     10.56.142.128:62063 - "GET /tasks/list HTTP/1.1" 200 OK
+INFO:     10.56.142.128:62063 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.128:49994 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:     10.56.142.128:49994 - "GET /configs/prechecks HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:49994 - "GET /status?env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: clone_auto_config_final
+INFO:main:env: orbupg, task: clone_auto_config_final, file_name: , lines: 
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:49994 - "GET /logs?task_type=full&task_segment=final&task=clone_auto_config_final&env=orbupg HTTP/1.1" 200 OK
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh, task name: clone_auto_config_final
+INFO:main:env: orbupg, task: clone_auto_config_final, file_name: orbupg_2026_04_23_22-47-02_clone_auto_config_final.log, lines: 1
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.128:49994 - "GET /logs?task_type=full&task_segment=final&task=clone_auto_config_final&env=orbupg&file_name=orbupg_2026_04_23_22-47-02_clone_auto_config_final.log&lines=1 HTTP/1.1" 200 OK
+INFO:     10.56.142.12:52992 - "GET /run?env=orbupg&task_type=full&task_segment=final&task=clone_auto_config_final HTTP/1.1" 401 Unauthorized
+INFO:main:Received login attempt for user: laks@candidsource.com
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:153: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:46310 - "POST /auth/jwt/login HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST https://localhost:8443/auth/jwt/login "HTTP/1.1 200 OK"
+INFO:     10.56.142.12:52992 - "POST /login HTTP/1.1" 200 OK
+/home/ebscloneauto/.pyenv/versions/candid_3.13/lib/python3.13/site-packages/jwt/api_jwt.py:371: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:main:script path: /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh
+INFO:main:Check if script is running already
+INFO:main:bash /u01/ebscloneauto/fastapi_db_tasks/scripts/clone.sh orbupg full-final status
+INFO:main:script running status stdout: THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: final
+task: clone_auto_config_final
+stat_arg/read_logs/patch_adop_args: status
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+clone_auto_config_final: is not running
+
+INFO:main:script running status stderr: 
+INFO:main:no running task found, proceeding to execute script
+INFO:main:executing script for task:full:clone_auto_config_final
+THIS_DIR: /u01/ebscloneauto/fastapi_db_tasks/scripts
+ENV: orbupg
+task_type: full
+task_segment: final
+task: clone_auto_config_final
+stat_arg/read_logs/patch_adop_args: 
+
+script_to_run: 
+ps -eaf | grep "clone_db_garmin.sh orbupg" | grep -v 'grep'
+db_clone_script file exists
+params: orbupg full final clone_auto_config_final 
+job submitted in background, check server log for more info: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/server/server.log
+INFO:     10.56.142.12:52992 - "GET /run?env=orbupg&task_type=full&task_segment=final&task=clone_auto_config_final HTTP/1.1" 200 OK
+INFO:main:checking task status
+INFO:main:status script executed successfully, check if status file exists
+INFO:main:status file found: /mnt/nfs/oracle.patches/ebscloneauto/ORBUPG/log/TASK_STATUS/orbupg_TASK_STATUS.log
+INFO:     10.56.142.12:52992 - "GET /status?env=orbupg HTTP/1.1" 200 OK

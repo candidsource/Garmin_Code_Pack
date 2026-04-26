@@ -1,0 +1,24 @@
+
+ORBTSTCD_DR =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+      (ADDRESS_LIST =
+        (ADDRESS = (PROTOCOL = TCP)(HOST = kc3xsd-rac301-dr-vip.garmin.com)(PORT = 1552)))
+      (ADDRESS_LIST =
+        (ADDRESS = (PROTOCOL = TCP)(HOST = kc3xsd-rac301-dr.garmin.com)(PORT = 1552)(IP = FIRST)))
+    )
+  )
+
+USE_SID_AS_SERVICE_ORBTSTCD            = ON
+STARTUP_WAIT_TIME_ORBTSTCD             = 0
+CONNECT_TIMEOUT_ORBTSTCD               = 10
+TRACE_LEVEL_ORBTSTCD                   = OFF
+LOG_DIRECTORY_ORBTSTCD                 = /u01/app/oracle/product/19.0.0/ORBTST/network/admin
+LOG_FILE_ORBTSTCD                      = ORBTSTCD
+TRACE_DIRECTORY_ORBTSTCD               = /u01/app/oracle/product/19.0.0/ORBTST/network/admin
+TRACE_FILE_ORBTSTCD                    = ORBTSTCD
+ADMIN_RESTRICTIONS_ORBTSTCD            = ON
+SUBSCRIBE_FOR_NODE_DOWN_EVENT_ORBTSTCD = OFF
+ENABLE_GLOBAL_DYNAMIC_ENDPOINT_ORBTSTCD=ON              # line added by Agent
+VALID_NODE_CHECKING_REGISTRATION_ORBTSTCD=SUBNET                # line added by Agent
+
