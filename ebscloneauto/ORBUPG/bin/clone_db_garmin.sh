@@ -276,7 +276,7 @@ function db_clone_tasks() {
             log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" end "${log_file}"
             return 0
         ;;
-        clone_post_steps*)
+        clone_post_steps*|clone_undo_temp_changes)
             new_script_path=""
             if [[ "${task_selector}" = "clone_post_steps_apps" ]]; then
                 script_path="${BIN_DIR}/db_post_clone_steps_apps.sh"
@@ -286,6 +286,10 @@ function db_clone_tasks() {
                 script_path="${BIN_DIR}/db_post_clone_steps_sys.sh"
                 env_file="${DB_SIDS[0]}_${LOGICAL_DB_NODE1:-${DB_NODE1}}.env"
                 new_script_path="${BIN_DIR}/DB_post_clone_steps_sys_${DB_SIDS[0]}.sh"
+            elif [[ "${task_selector}" = "clone_undo_temp_changes" ]]; then
+                script_path="${BIN_DIR}/undo_temp_changes_sys.sh"
+                env_file="${DB_SIDS[0]}_${LOGICAL_DB_NODE1:-${DB_NODE1}}.env"
+                new_script_path="${BIN_DIR}/DB_undo_temp_changes_sys_${DB_SIDS[0]}.sh"
             fi
 
             echo "ENV FILENAME ON: ${env_file}"
@@ -708,7 +712,7 @@ fi
 
 
 # IMPORTANT: Do not change the order of tasks
-DB_CLONE_TASKS="clone_primary clone_secondary clone_third clone_auto_config clone_post_steps_apps clone_post_steps_sys"
+DB_CLONE_TASKS="clone_primary clone_undo_temp_changes clone_secondary clone_third clone_auto_config clone_post_steps_apps clone_post_steps_sys"
 APP_CLONE_TASKS="apps_file_system apps_primary apps_ha_steps apps_secondary apps_change_pass apps_post_clone_a apps_post_clone_b apps_post_clone_c apps_orb_run_master_postclone_steps"
 FINAL_TASKS="final_clone_auto_config_final final_apps_auto_config_final"
 

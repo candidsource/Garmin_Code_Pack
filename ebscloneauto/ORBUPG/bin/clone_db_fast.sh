@@ -277,23 +277,28 @@ function db_clone_tasks() {
             return 0
         ;;
         clone_post_steps*)
-        new_script_path=""
-	    if [[ "${task_selector}" = "clone_post_steps_apps" ]]; then
-		script_path="${BIN_DIR}/db_post_clone_steps_apps.sh"
+            new_script_path=""
+            if [[ "${task_selector}" = "clone_post_steps_apps" ]]; then
+                script_path="${BIN_DIR}/db_post_clone_steps_apps.sh"
                 env_file="${PDB_NAME}_${LOGICAL_DB_NODE1:-${DB_NODE1}}.env"
                 new_script_path="${BIN_DIR}/DB_post_clone_steps_apps_${PDB_NAME}.sh"
-	    elif [[ "${task_selector}" = "clone_post_steps_sys" ]]; then
-		script_path="${BIN_DIR}/db_post_clone_steps_sys.sh"
+            elif [[ "${task_selector}" = "clone_post_steps_sys" ]]; then
+                script_path="${BIN_DIR}/db_post_clone_steps_sys.sh"
                 env_file="${DB_SIDS[0]}_${LOGICAL_DB_NODE1:-${DB_NODE1}}.env"
                 new_script_path="${BIN_DIR}/DB_post_clone_steps_sys_${DB_SIDS[0]}.sh"
-	    fi
-	    echo "ENV FILENAME ON: ${env_file}"
-	    echo "new_script_path: ${new_script_path}"
-	    if [[ -z "${new_script_path// /}" ]]; then
-		echo "PATH DOES NOT EXIST: ${new_script_path}"
-		echo "Ceate the file and give appropriate permissions"
+            elif [[ "${task_selector}" = "clone_undo_temp_changes" ]]; then
+                script_path="${BIN_DIR}/undo_temp_changes_sys.sh"
+                env_file="${DB_SIDS[0]}_${LOGICAL_DB_NODE1:-${DB_NODE1}}.env"
+                new_script_path="${BIN_DIR}/DB_undo_temp_changes_sys_${DB_SIDS[0]}.sh"
+            fi
+
+            echo "ENV FILENAME ON: ${env_file}"
+            echo "new_script_path: ${new_script_path}"
+            if [[ -z "${new_script_path// /}" ]]; then
+                echo "PATH DOES NOT EXIST: ${new_script_path}"
+                echo "Ceate the file and give appropriate permissions"
                 my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${ssh_exit_code}"
-		exit 1
+		        exit 1
             fi
 
             extra_vars="ENV=${ENV}
@@ -612,7 +617,7 @@ fi
 
 
 # IMPORTANT: Do not change the order of tasks
-DB_CLONE_TASKS="clone_primary clone_secondary clone_auto_config clone_post_steps"
+DB_CLONE_TASKS="clone_primary clone_undo_temp_changes clone_secondary clone_auto_config clone_post_steps"
 APP_CLONE_TASKS="apps_file_system apps_primary apps_ha_steps apps_secondary apps_third apps_change_pass apps_auto_config apps_post_clone"
 FINAL_TASKS="final_clone_auto_config_final final_apps_auto_config_final"
 
