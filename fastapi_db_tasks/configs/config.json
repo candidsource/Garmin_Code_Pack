@@ -8,6 +8,7 @@
                 },
                 "tasks_order": [
                     "primary",
+                    "undo_temp_changes",
                     "secondary",
                     "third",
                     "auto_config",
@@ -16,6 +17,11 @@
                 ],
                 "primary": {
                     "title": "Primay DB Tier Clone",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "undo_temp_changes": {
+                    "title": "UNDO TEMP Tablespace Changes",
                     "tasks_order": [],
                     "subtasks": {}
                 },
@@ -56,9 +62,9 @@
                     "ha_steps",
                     "secondary",
                     "change_pass",
-		    "post_clone_a",
-		    "post_clone_b",
-		    "post_clone_c",
+		            "post_clone_a",
+		            "post_clone_b",
+		            "post_clone_c",
                     "orb_run_master_postclone_steps",
                     "Non_EBS_Password_Changes"
                 ],
@@ -196,12 +202,18 @@
                 },
                 "tasks_order": [
                     "primary",
+                    "undo_temp_changes",
                     "secondary",
                     "auto_config",
                     "post_steps"
                 ],
                 "primary": {
                     "title": "Primay DB Tier Clone",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "undo_temp_changes": {
+                    "title": "UNDO TEMP Tablespace Changes",
                     "tasks_order": [],
                     "subtasks": {}
                 },
