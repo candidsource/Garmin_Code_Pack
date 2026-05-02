@@ -263,7 +263,7 @@ function db_clone_tasks() {
 
             log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" end "${log_file}"
             return 0
-	    ;;
+        ;;
         clone_auto_config*|final_clone_auto_config_final)
             local auto_config_completed_with_errors auto_config_completed_successfully
             db_clone_auto_cfg "${task_type}" "${task_segment}" "${task}"
@@ -313,8 +313,8 @@ echo \"Sourcing: ${DB_HOME}/${env_file}\"
 
             if [[ -z "${PRIMARY_DBS// /}" ]]; then
                 echo "PRIMARY_DBS is not set"
-	            log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
-		        my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
+                log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
+                my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
             fi
             if ! get_creds; then
                 log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
@@ -344,7 +344,7 @@ echo \"Sourcing: ${DB_HOME}/${env_file}\"
         *)
             echo "Unknown clone task: ${task_selector}"
             log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
-	        my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
+            my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
         ;;
     esac
 }
@@ -505,7 +505,7 @@ BIN_DIR=${BIN_DIR}
             if [[ "${ssh_exit_code}" -ne 0 ]]; then
                 echo "$task failed with exit code ${ssh_exit_code}" | tee -a "${log_file}"
                 log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
-		        my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
+                my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
             fi
 
             log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" end "${log_file}"
@@ -524,7 +524,7 @@ BIN_DIR=${BIN_DIR}
                 if [[ "${ssh_exit_code}" -ne 0 ]]; then
                     echo "$task failed with exit code ${ssh_exit_code}" | tee -a "${log_file}"
                     log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
-		            my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
+                    my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
                 fi
             done
 
@@ -532,7 +532,7 @@ BIN_DIR=${BIN_DIR}
             return 0
             ;;
         apps_post_clone*)
-	        local host env_file
+            local host env_file
 
             host="${APPS[0]}"
             env_file=""
@@ -545,24 +545,24 @@ SCRIPT=${SCRIPT_PATH}/clone
 echo \"expected to run on : ${host}\"
 echo \"running on: \$(hostname)\"
 "
-	        case "${task_selector}" in
+            case "${task_selector}" in
                 apps_post_clone_a)
                     script_path="${BIN_DIR}/post_clone_steps_apps_a.sh"
                     new_script_path="${BIN_DIR}/APPS_post_clone_steps_a.sh"
-		        ;;
+                ;;
                 apps_post_clone_b)
                     script_path="${BIN_DIR}/post_clone_steps_apps_b.sh"
                     new_script_path="${BIN_DIR}/APPS_post_clone_steps_b.sh"
-		            host="${ACFG[0]}"
-	                env_file="${DB_HOME}/${DB_SIDS[0]}_${LOGICAL_DB_NODE1:-${DB_NODE1}}.env"
-		            extra_vars+="
+                    host="${ACFG[0]}"
+                    env_file="${DB_HOME}/${DB_SIDS[0]}_${LOGICAL_DB_NODE1:-${DB_NODE1}}.env"
+                    extra_vars+="
 ENV_FILE=\"${env_file}\"
 if [ -f \"\${ENV_FILE}\" ]; then
     . \"\${ENV_FILE}\"
 else
     echo \"ENV FILE NOT EXISTS: \${ENV_FILE}\"
     exit 1
-fi	
+fi    
 "
                 ;;
                 apps_post_clone_c)
@@ -582,12 +582,12 @@ fi
                 log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
                 my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${ssh_exit_code}"
             fi
-	        echo "-- sshing to: ${host}"
+            echo "-- sshing to: ${host}"
             echo "${CREDS} ${new_script_path}" | ssh -t "${host}" | tee -a "${log_file}"
 
             ssh_exit_code="${PIPESTATUS[1]}"
             if [[ "${ssh_exit_code}" -ne 0 ]]; then
-		        echo "ssh exit code is not 0: ${ssh_exit_code}"
+                echo "ssh exit code is not 0: ${ssh_exit_code}"
                 log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
                 my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${ssh_exit_code}"
             fi
@@ -612,7 +612,7 @@ fi
         *)
             echo "Unknown task: ${task}"
             log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
-	        my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
+            my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${exit_code}"
         ;;
     esac
 
