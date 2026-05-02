@@ -871,7 +871,7 @@ case "${TASK_SEGMENT}" in
     ;;
 esac
 
-echo "clone_db.sh completed successfully for task_type: ${TASK_TYPE}, task_segment: ${TASK_SEGMENT}, task: ${TASK}"
+echo "clone_db_garmin.sh completed successfully for task_type: ${TASK_TYPE}, task_segment: ${TASK_SEGMENT}, task: ${TASK}"
 
 
 
