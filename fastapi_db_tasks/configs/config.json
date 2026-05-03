@@ -62,9 +62,9 @@
                     "ha_steps",
                     "secondary",
                     "change_pass",
-		            "post_clone_a",
-		            "post_clone_b",
-		            "post_clone_c",
+                    "post_clone_a",
+                    "post_clone_b",
+                    "post_clone_c",
                     "orb_run_master_postclone_steps",
                     "Non_EBS_Password_Changes"
                 ],
@@ -98,7 +98,7 @@
                     "tasks_order": [],
                     "subtasks": {}
                 },
-		        "post_clone_a": {
+                "post_clone_a": {
                     "title": "Post Clone Steps A",
                     "tasks_order": [],
                     "subtasks": {}
@@ -205,7 +205,8 @@
                     "undo_temp_changes",
                     "secondary",
                     "auto_config",
-                    "post_steps"
+                    "post_steps_apps",
+                    "post_steps_sys"
                 ],
                 "primary": {
                     "title": "Primay DB Tier Clone",
@@ -250,8 +251,8 @@
                     "secondary",
                     "change_pass",
                     "post_clone_a",
-		            "post_clone_b",
-		            "post_clone_c",
+                    "post_clone_b",
+                    "post_clone_c",
                     "orb_run_master_postclone_steps",
                     "wallet_creation_for_payment_module",
                     "Non_EBS_Password_Changes"
