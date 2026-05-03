@@ -145,9 +145,6 @@
                 --bs-btn-hover-border-color: #495057;
             }
 
-            .table {
-                /* --bs-table-border-color: #495057; */
-            }
 
             .highlighted_row {
                 background-color: #adb5bd;
@@ -498,9 +495,9 @@
                             <thead class="table-dark">
                                 <tr>
                                     <th>Task</th>
-                                    <th>Current State</th>
+                                    <th>Status</th>
                                     <th>Started</th>
-                                    <th>Finished</th>
+                                    <th >Finished</th>
                                     <th>
                                         <span id="extra_header_env_cell_${task}"></span>
                                     </th>
@@ -1004,7 +1001,7 @@
                                 <input class="form-check-input" type="checkbox" role="switch" id="resume_${task_identifier}" onclick="switch_resume(event, '${task_type}','${task_segment}', '${task}');" title="Resume">
 
                                 <button class="btn btn-sm btn-success btn-resume custom-button" id="start_${task_identifier}" onclick="${confirmation_modal_name}(event, '${task_type}', '${task_segment}', '${task}');">Start</button>
-                                <button class="btn btn-sm btn-danger btn-resume custom-button" id="abort_${task_identifier}" onclick="abort('${task_type}', '${task_segment}', '${task}')">Abort</button>
+                                <button class="btn btn-sm btn-danger btn-resume custom-button" id="abort_${task_identifier}" onclick="abort('${task_type}', '${task_segment}', '${task}')" hidden>Abort</button>
 
                             </div>
 
@@ -1251,7 +1248,7 @@
                     let task_identifier = `${task_type}-${task_segment}_${task}`;
                     tasks_row = `${tasks_row}<tr>`;
                     tasks_row += `
-                        <td style="width:250px;">
+                        <td style="min-width:200px;">
                             <input type="checkbox" class="patch_adop_selector" id="select_${task_identifier}" name="select_${task_identifier}" />
 
                             ${tasks[task]["title"]}

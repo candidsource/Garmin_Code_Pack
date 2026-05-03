@@ -42,12 +42,12 @@ async function update_prechecks(task_type) {
                                 onclick="mark_checklist(event, '${task_type}', '${checklist_key}');" 
                                 ${data["completed"] ? "checked" : ""}
                         >
-                        ${data["completed"]}
+                        ${data["completed"] || "NA"}
                     </div>
                 </td>
-                <td>${data["completed_by"]}</td>
-                <td>${data["completed_at"]}</td>
-                <td>${data["notes"]}</td>
+                <td>${data["completed_by"] || "NA"}</td>
+                <td>${data["completed_at"] || "NA"}</td>
+                <td>${data["notes"] || "NA"}</td>
             </tr>`;
         });
 

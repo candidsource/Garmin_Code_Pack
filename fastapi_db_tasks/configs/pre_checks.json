@@ -324,7 +324,7 @@
             "data": []
         },
         "notify_twmis_dba": {
-            "title": "Notify TWMIS - DBA at Taiwan; #IT-EBA-Non-ProdEBSASCPDemantra-AllUsers@garmin.com",
+            "title": "Notify TWMIS;#IT-EBA-Non-ProdEBSASCPDemantra-AllUsers@garmin.com",
             "data": []
         },
         "check_run_fs": {
@@ -348,7 +348,7 @@
             "data": []
         },
         "check_nfs_space": {
-            "title": "Check Free Space in /mnt/nfs - Should have atleast 150GB Free Space",
+            "title": "Check Free Space in /mnt/nfs",
             "data": []
         },
         "check_adop_cycle": {
@@ -384,7 +384,7 @@
             "data": []
         },
         "update_init_asm": {
-            "title": "Update Init parameter file with correct ASM Diskgroup Names for Datafiles,controlfiles,logfiles",
+            "title": "Update Init parameter file with correct ASM Diskgroup Names",
             "data": []
         },
         "save_vertex_config": {
