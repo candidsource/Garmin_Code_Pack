@@ -223,7 +223,7 @@ function db_clone_tasks() {
                 echo "SECONDRY_DBS is not set"
                 exit 1
             fi
-            script_path="${BIN_DIR}/secondary_db.sh"
+            script_path="${BIN_DIR}/secondary_db.bin"
             if ! get_creds; then
                 log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
                 my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${ssh_exit_code}"

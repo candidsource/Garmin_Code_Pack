@@ -98,7 +98,7 @@
                     "tasks_order": [],
                     "subtasks": {}
                 },
-		"post_clone_a": {
+		        "post_clone_a": {
                     "title": "Post Clone Steps A",
                     "tasks_order": [],
                     "subtasks": {}
@@ -227,8 +227,13 @@
                     "tasks_order": [],
                     "subtasks": {}
                 },
-                "post_steps": {
-                    "title": "Post Clone Steps on DB Nodes",
+                "post_steps_apps": {
+                    "title": "Post Clone Steps on DB [Apps]",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_steps_sys": {
+                    "title": "Post Clone Steps on DB [Sys]",
                     "tasks_order": [],
                     "subtasks": {}
                 }
@@ -244,7 +249,9 @@
                     "ha_steps",
                     "secondary",
                     "change_pass",
-                    "post_clone",
+                    "post_clone_a",
+		            "post_clone_b",
+		            "post_clone_c",
                     "orb_run_master_postclone_steps",
                     "wallet_creation_for_payment_module",
                     "Non_EBS_Password_Changes"
@@ -279,8 +286,18 @@
                     "tasks_order": [],
                     "subtasks": {}
                 },
-                "post_clone": {
-                    "title": "Post Clone Steps",
+                "post_clone_a": {
+                    "title": "Post Clone Steps A",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_clone_b": {
+                    "title": "Post Clone Steps B",
+                    "tasks_order": [],
+                    "subtasks": {}
+                },
+                "post_clone_c": {
+                    "title": "Post Clone Steps C",
                     "tasks_order": [],
                     "subtasks": {}
                 },
