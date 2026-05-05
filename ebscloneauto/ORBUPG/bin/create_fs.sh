@@ -76,9 +76,6 @@ gunzip -c  /mnt/nfs/oracle.patches/scripts/master_clone_files/ORBIT_EBSapps.tar.
 if [[ ${PIPESTATUS[0]} -eq 137 ]] || [[ ${PIPESTATUS[1]} -eq 137 ]]; then
     echo "Detected kill -9 in the pipeline."
     exit 1
-elif [[ ${PIPESTATUS[0]} -ne 0 ]] || [[ ${PIPESTATUS[1]} -eq 0 ]]; then
-    echo "Something went wrong"
-    exit 1
 fi
 
 

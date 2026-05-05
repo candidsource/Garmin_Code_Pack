@@ -77,9 +77,9 @@ gunzip -c "${APPL_TOP_TAR}" | tar -xlf -
 if [[ ${PIPESTATUS[0]} -eq 137 ]] || [[ ${PIPESTATUS[1]} -eq 137 ]]; then
     echo "Detected kill -9 in the pipeline."
     exit 1
-elif [[ ${PIPESTATUS[0]} -ne 0 ]] || [[ ${PIPESTATUS[1]} -eq 0 ]]; then
-    echo "Something went wrong"
-    exit 1
+# elif [[ ${PIPESTATUS[0]} -ne 0 ]] || [[ ${PIPESTATUS[1]} -eq 0 ]]; then
+#     echo "Something went wrong: ${PIPESTATUS[@]}"
+#     exit 1
 fi
 
 
@@ -97,9 +97,9 @@ gunzip -c "${JAVA_TOP_TAR}" | tar -xlf -
 if [[ ${PIPESTATUS[0]} -eq 137 ]] || [[ ${PIPESTATUS[1]} -eq 137 ]]; then
     echo "Detected kill -9 in the pipeline."
     exit 1
-elif [[ ${PIPESTATUS[0]} -ne 0 ]] || [[ ${PIPESTATUS[1]} -eq 0 ]]; then
-    echo "Something went wrong"
-    exit 1
+# elif [[ ${PIPESTATUS[0]} -ne 0 ]] || [[ ${PIPESTATUS[1]} -eq 0 ]]; then
+#     echo "Something went wrong: ${PIPESTATUS[@]}"
+#     exit 1
 fi
 
 echo "Completed Reset..." | tee -a ${LOG}
