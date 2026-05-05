@@ -362,7 +362,7 @@ function apps_clone_tasks() {
     echo "db clone TASK selector IS: ${task_selector}"
     case "${task_selector}" in
         apps_file_system)
-            script_path="${BIN_DIR}/create_fs.sh"
+            script_path="${BIN_DIR}/create_fs_fast.sh"
             if ! get_creds; then
                 log_task_status "${ENV}" "${task_type}" "${task_segment}" "${task}" failed "${log_file}"
                 my_exit "${task_type}-${task_segment}_${task}" "FAILED" "${ssh_exit_code}"

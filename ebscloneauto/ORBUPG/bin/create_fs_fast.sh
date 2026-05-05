@@ -17,6 +17,10 @@
 run_env="$1"
 source "${run_env}"
 
+. ${TGT_BASE_FS}/EBSapps.env run
+
+title "Create Directories" | tee -a ${LOG}
+
 APPL_TOP_TAR="/mnt/nfs/oracle.patches/scripts/master_clone_files/ORBIT_appl.tar.gz"
 JAVA_TOP_TAR="/mnt/nfs/oracle.patches/scripts/master_clone_files/ORBIT_java_top.tar.gz"
 
@@ -50,12 +54,12 @@ if [[ ! -d "${OAD_TOP}/java" ]]; then
 fi
 
 
-if [[ -f "${APPL_TOP_TAR}" ]]; then
+if [[ ! -f "${APPL_TOP_TAR}" ]]; then
     echo "TAR FILE DOES NOT EXIST: ${APPL_TOP_TAR}"
     exit 1
 fi
 
-if [[ -f "${JAVA_TOP_TAR}" ]]; then
+if [[ ! -f "${JAVA_TOP_TAR}" ]]; then
     echo "TAR FILE DOES NOT EXIST: ${JAVA_TOP_TAR}"
     exit 1
 fi
@@ -63,22 +67,40 @@ fi
 
 # backup appl and extract
 cd "${APPL_TOP}/.."
-echo "Moving ${APPL_TOP}/../appl to ${APPL_TOP}/../appl_old"
+echo -e "\n\nMoving ${APPL_TOP}/../appl to ${APPL_TOP}/../appl_old"
 mv appl appl_old
 
 echo "Extracting: ${APPL_TOP_TAR} "
-gunzip -c "${APPL_TOP_TAR}" | tar -xlf - &
+echo "gunzip -c ${APPL_TOP_TAR}"
+set -o pipefail
+gunzip -c "${APPL_TOP_TAR}" | tar -xlf -
+if [[ ${PIPESTATUS[0]} -eq 137 ]] || [[ ${PIPESTATUS[1]} -eq 137 ]]; then
+    echo "Detected kill -9 in the pipeline."
+    exit 1
+elif [[ ${PIPESTATUS[0]} -ne 0 ]] || [[ ${PIPESTATUS[1]} -eq 0 ]]; then
+    echo "Something went wrong"
+    exit 1
+fi
 
 
 
 # backup java and extract
 cd "${OAD_TOP}"
-echo "Moving ${OAD_TOP}/java to ${OAD_TOP}/java"
-mv java to java_old
+echo -e "\n\nMoving ${OAD_TOP}/java to ${OAD_TOP}/java_old"
+mv java java_old
+
 
 echo "Extracting: ${JAVA_TOP_TAR} "
-gunzip -c "${JAVA_TOP_TAR}" | tar -xlf - &
-
+echo "gunzip -c ${JAVA_TOP_TAR}"
+set -o pipefail
+gunzip -c "${JAVA_TOP_TAR}" | tar -xlf -
+if [[ ${PIPESTATUS[0]} -eq 137 ]] || [[ ${PIPESTATUS[1]} -eq 137 ]]; then
+    echo "Detected kill -9 in the pipeline."
+    exit 1
+elif [[ ${PIPESTATUS[0]} -ne 0 ]] || [[ ${PIPESTATUS[1]} -eq 0 ]]; then
+    echo "Something went wrong"
+    exit 1
+fi
 
 echo "Completed Reset..." | tee -a ${LOG}
 
